@@ -1,0 +1,16 @@
+DELIMITER //
+
+CREATE FUNCTION GetAnnualSalary(
+monthlySalary DECIMAL(10,2)
+)
+RETURNS DECIMAL(10,2)
+
+DETERMINISTIC
+
+BEGIN
+
+RETURN monthlySalary * 12;
+
+END //
+
+DELIMITER ;
