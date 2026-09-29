@@ -1,4 +1,3 @@
-
 -- ================ CREATE AND USE DATABASE ================
 DROP DATABASE IF EXISTS dating_app_DB;
 CREATE DATABASE dating_app_DB;
