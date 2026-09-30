@@ -1,0 +1,13 @@
+# Feature Mapping
+- Lambda/Functional Interface: `Main.demoFeatures`, `BankingOperation`
+- Predicate/Consumer/Function/Supplier: `BankingAnalytics.demonstrate`
+- Streams/Collectors: `BankingAnalytics` and `BankingReport.dashboard`
+- Optional: `BankingService.findCustomer/findAccount`, `Main.demoFeatures`
+- Method references: `BankingAnalytics`
+- Date-Time API: `Transaction`, `SampleDataLoader`
+- Records: `CustomerRecord`, `TransactionRecord`, `AccountSummary`
+- Sealed classes: `BankAccount` hierarchy
+- Pattern matching: `BankingReport.accountKind`
+- Switch expression: `BankingReport.classify`, `Main.addAccount`
+- Text blocks: `BankingReport`, `Main.menu`
+- Exceptions: `exception` package
