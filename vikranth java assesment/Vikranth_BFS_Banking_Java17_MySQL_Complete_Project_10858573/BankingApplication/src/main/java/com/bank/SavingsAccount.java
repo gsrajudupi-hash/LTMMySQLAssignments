@@ -1,0 +1,1 @@
+package com.bank;public final class SavingsAccount extends BankAccount{public SavingsAccount(long n,int c,double b,String s){super(n,c,b,s);}String type(){return"SAVINGS";}double minimum(){return 1000;}}

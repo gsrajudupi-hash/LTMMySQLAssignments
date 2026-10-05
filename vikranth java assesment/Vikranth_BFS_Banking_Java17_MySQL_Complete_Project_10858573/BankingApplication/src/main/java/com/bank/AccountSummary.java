@@ -1,0 +1,1 @@
+package com.bank;public record AccountSummary(long accountNumber,String accountType,double balance){}

@@ -1,0 +1,1 @@
+package com.bank;import java.time.*;public record Transaction(int transactionId,long accountNumber,String transactionType,double amount,LocalDateTime transactionDate,String description){public Transaction{if(amount<=0||transactionType==null)throw new IllegalArgumentException("Invalid transaction");}}

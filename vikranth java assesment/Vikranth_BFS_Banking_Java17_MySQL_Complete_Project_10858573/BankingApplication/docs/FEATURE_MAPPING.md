@@ -1,0 +1,11 @@
+# Feature mapping
+- OOP and encapsulation: Customer, BankAccount hierarchy
+- Lambdas and functional interface: BankingOperation, BankingService
+- Predicate/Consumer/Function/Supplier/Optional/method references: Reports.customerReport
+- Streams and collectors: Reports customer/account/transaction/dashboard methods
+- Date & Time: Transaction and Main
+- Records: CustomerRecord, Transaction, AccountSummary
+- Sealed/final/non-sealed and pattern matching: account hierarchy and Main.showType
+- Switch expressions and text blocks: Main and Reports
+- JDBC/MySQL: DBConnection, BankingDao, database scripts
+- Exceptions: four custom exception classes

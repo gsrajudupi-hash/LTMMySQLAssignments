@@ -1,0 +1,1 @@
+package com.bank;public final class CurrentAccount extends BankAccount{public CurrentAccount(long n,int c,double b,String s){super(n,c,b,s);}String type(){return"CURRENT";}double minimum(){return 5000;}}

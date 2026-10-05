@@ -1,0 +1,1 @@
+package com.bank;@FunctionalInterface public interface BankingOperation{double execute(double amount,double balance);}

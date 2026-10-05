@@ -1,0 +1,1 @@
+package com.bank;public non-sealed class LoanAccount extends BankAccount{public LoanAccount(long n,int c,double b,String s){super(n,c,b,s);}String type(){return"LOAN";}double minimum(){return 0;}}
