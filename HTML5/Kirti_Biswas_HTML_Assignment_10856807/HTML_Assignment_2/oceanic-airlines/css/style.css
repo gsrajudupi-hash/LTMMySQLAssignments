@@ -1,0 +1,288 @@
+/* Reset */
+*{
+    margin:0;
+    padding:0;
+    box-sizing:border-box;
+}
+
+/* Body */
+body{
+    font-family: Arial, sans-serif;
+    background:#b9e8e8;
+    color:#333;
+}
+
+/* Wrapper */
+.wrapper{
+    width:80%;
+    margin:30px auto;
+}
+
+/* Header */
+header{
+    background:#1f9cad;
+    border:3px solid #0a8997;
+    border-radius:15px 15px 0 0;
+    text-align:center;
+    padding:20px;
+}
+
+.logo-area {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding-top: 15px;
+}
+
+.logo-area img {
+    width: 60px;
+    height: auto;
+    margin-right: 20px;
+}
+
+.logo-area h1 {
+    margin: 0;
+    color: white;
+    font-size: 70px;
+    font-family: Georgia, serif;
+    font-weight: bold;
+    text-shadow: 3px 3px 3px gray;
+}
+
+
+/* Navigation Background */
+nav{
+    background:#2b9cac;
+    padding:40px 10px 5px;
+    border-radius:15px 15px 0 0;
+}
+
+/* Menu */
+.menu{
+    list-style:none;
+    display:flex;
+    justify-content:space-around;
+    margin:0;
+    padding:0;
+}
+
+/* Menu Item */
+.menu li{
+    position:relative;
+}
+
+/* Tab Design */
+.menu li a{
+    display:block;
+    width:200px;
+    padding:10px 0;
+    text-align:center;
+
+    background:#f28c00;
+    color:white;
+
+    text-decoration:none;
+    font-family:Georgia, serif;
+    font-weight:bold;
+
+    border-radius:10px 10px 0 0;
+
+    box-shadow:0 2px 2px rgba(0,0,0,0.3);
+
+    transition:all .5s;
+
+    white-space:nowrap;
+}
+
+/* Triangle on Top */
+.menu li::before{
+    content:"";
+    position:absolute;
+
+    top:-18px;
+    left:50%;
+
+    transform:translateX(-50%);
+
+    width:0;
+    height:0;
+
+    border-left:18px solid transparent;
+    border-right:18px solid transparent;
+    border-bottom:18px solid #f28c00;
+}
+
+/* Hover Effect */
+.menu li:hover::before{
+    display:none;
+}
+
+.menu li a:hover{
+    background:linear-gradient(
+        to bottom,
+        #ffb347,
+        #f28c00
+    );
+
+    transform:translateY(-6px);
+}
+
+
+/* Main Content */
+main{
+    background:white;
+    border-left:3px solid #0a8997;
+    border-right:3px solid #0a8997;
+    border-bottom:3px solid #0a8997;
+    border-radius:0 0 15px 15px;
+    padding:30px;
+}
+
+/* Hero image */
+.hero img{
+    width:80%;
+    display:block;
+    margin:0 auto 25px;
+    border-radius:10px;
+}
+
+.more-link a{
+    color:#7bbcc2;
+    text-decoration:none;
+    font-weight:bold;
+}
+
+.more-link::before{
+    content:"→ ";
+    color:#d8a56c;
+}
+
+/* Welcome heading */
+.welcome-section{
+    margin-top:25px;
+    margin-left:20px;
+}
+
+.welcome-section h2{
+    color:#2ca7b0;
+    font-size:42px;
+    margin-bottom:15px;
+    font-family:Georgia, serif;
+}
+
+.welcome-section p{
+    font-size:18px;
+    line-height:1.5;
+    margin-bottom:15px;
+}
+
+/* Two columns exactly like screenshot */
+.resources{
+    width:100%;
+    margin-top:40px;
+    overflow:hidden;
+}
+
+.left-box{
+    float:left;
+    width:40%;
+    margin-left:60px;
+}
+
+.right-box{
+    float:right;
+    width:30%;
+    margin-right:60px;
+}
+
+.left-box h3,
+.right-box h3{
+    color:#2ca7b0;
+    font-size:22px;
+    margin-bottom:15px;
+    font-family:Georgia, serif;
+}
+
+.travel-links{
+    list-style:none;
+    padding:0;
+}
+
+.travel-links li{
+    margin-bottom:10px;
+}
+
+.travel-links li::before{
+    content:"→ ";
+    color:#d6a46a;
+    font-weight:bold;
+}
+
+.travel-links a{
+    color:#d6a46a;
+    text-decoration:underline;
+    font-size:18px;
+}
+
+.travel-links a:hover{
+    color:#b9854d;
+}
+
+.travel-links .more-link a{
+    color:#7bbcc2 !important;
+    text-decoration:none;
+    font-weight:bold;
+}
+
+/* Footer */
+footer{
+    text-align:center;
+    /* padding:20px;
+    margin-top:30px; */
+
+    color:#7abdc4;
+    font-family:Georgia, serif;
+    font-size:16px;
+}
+
+footer p{
+    margin:5px 0;
+}
+
+footer a{
+    color:#7abdc4;
+    text-decoration:underline;
+}
+
+footer a:hover{
+    color:#4d9ea5;
+}
+
+/* Responsive */
+@media(max-width:768px){
+
+    .wrapper{
+        width:95%;
+    }
+
+    .menu{
+        flex-direction:column;
+    }
+
+    .menu li{
+        margin-bottom:10px;
+    }
+
+    .columns{
+        flex-direction:column;
+    }
+
+    .column{
+        width:100%;
+        margin-bottom:20px;
+    }
+
+    .logo-area h1{
+        font-size:32px;
+    }
+}
