@@ -1,0 +1,8 @@
+package com.vikranth.ems.service;
+import com.vikranth.ems.dao.*; import com.vikranth.ems.exception.DataAccessException; import com.vikranth.ems.model.*; import com.vikranth.ems.util.ConnectionFactory;
+import java.math.BigDecimal; import java.sql.*; import java.util.*;
+public class EmployeeService {
+ private final EmployeeDao dao; public EmployeeService(EmployeeDao dao){this.dao=dao;}
+ public int add(Employee e){return dao.insert(e);} public List<Employee> all(){return dao.findAll();} public Employee get(int id){return dao.findById(id).orElseThrow(()->new IllegalArgumentException("Employee not found: "+id));} public boolean update(Employee e){return dao.update(e);} public boolean delete(int id){return dao.delete(id);} public List<EmployeeDetails> details(){return dao.findDetailsWithDepartment();} public List<DepartmentCount> counts(){return dao.departmentCounts();} public List<Employee> salaryAtLeast(BigDecimal v){return dao.findByMinimumSalary(v);} public List<Employee> procedureByDepartment(int id){return dao.callEmployeesByDepartment(id);} public BigDecimal annualSalary(int id){return dao.callAnnualSalary(id);} public int[] batch(List<Employee> e){return dao.batchInsert(e);}
+ public void transferWithAudit(int employeeId,int newDeptId){try(Connection c=ConnectionFactory.getConnection()){try{c.setAutoCommit(false);dao.transfer(c,employeeId,newDeptId);try(PreparedStatement p=c.prepareStatement("INSERT INTO employee_transfer(employee_id,new_department_id,transferred_at) VALUES(?,?,CURRENT_TIMESTAMP)")){p.setInt(1,employeeId);p.setInt(2,newDeptId);p.executeUpdate();}c.commit();}catch(Exception e){c.rollback();throw e;}finally{c.setAutoCommit(true);}}catch(SQLException e){throw new DataAccessException("Transfer transaction failed",e);}}
+}
