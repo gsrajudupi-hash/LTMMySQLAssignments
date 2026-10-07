@@ -1,0 +1,780 @@
+/* Reset */
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: Arial, sans-serif;
+    background: #f4f6f9;
+}
+
+/* Header */
+
+header {
+    background: #003366;
+    color: white;
+
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+
+    padding: 15px 50px;
+}
+
+.logo {
+    font-size: 28px;
+    font-weight: bold;
+}
+
+nav a {
+    color: white;
+    text-decoration: none;
+    margin-left: 20px;
+    font-size: 16px;
+}
+
+nav a:hover {
+    color: #ffd700;
+}
+
+/* Hero Section */
+
+.hero {
+    background: linear-gradient(to right,
+            #003366,
+            #00509e);
+
+    color: white;
+    text-align: center;
+
+    padding: 80px 20px;
+}
+
+.hero h1 {
+    font-size: 45px;
+    margin-bottom: 15px;
+}
+
+.hero p {
+    font-size: 18px;
+}
+
+/* Service Cards */
+
+#serviceContainer {
+    display: grid;
+
+    grid-template-columns:
+        repeat(auto-fit, minmax(250px, 1fr));
+
+    gap: 20px;
+
+    padding: 30px;
+}
+
+.service-card {
+    background: white;
+
+    border-radius: 10px;
+
+    padding: 20px;
+
+    text-align: center;
+
+    box-shadow:
+        0 2px 10px rgba(0, 0, 0, 0.2);
+
+    transition: 0.3s;
+}
+
+.service-card:hover {
+
+    transform: translateY(-5px);
+
+    background: #003366;
+
+    color: white;
+}
+
+.service-card h3 {
+    margin-bottom: 10px;
+}
+
+/* Login Card */
+
+.login-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    height: 80vh;
+}
+
+.login-card {
+    width: 400px;
+
+    background: white;
+
+    padding: 30px;
+
+    border-radius: 15px;
+
+    box-shadow:
+        0 0 15px rgba(0, 0, 0, 0.2);
+}
+
+.login-card h2 {
+    text-align: center;
+    margin-bottom: 20px;
+}
+
+.login-card input {
+    width: 100%;
+
+    padding: 10px;
+
+    margin-top: 5px;
+    margin-bottom: 15px;
+}
+
+.login-card button {
+    width: 100%;
+
+    padding: 12px;
+
+    border: none;
+
+    background: #003366;
+
+    color: white;
+
+    cursor: pointer;
+}
+
+.show-password {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    margin-bottom: 15px;
+}
+
+.show-password input[type="checkbox"] {
+    width: auto;
+    margin: 0;
+}
+
+.show-password label {
+    margin: 0;
+    cursor: pointer;
+}
+
+/* Register Card */
+
+.register-container {
+    display: flex;
+    justify-content: center;
+
+    padding: 30px;
+}
+
+.register-card {
+
+    width: 700px;
+
+    background: white;
+
+    padding: 30px;
+
+    border-radius: 15px;
+
+    box-shadow:
+        0 0 15px rgba(0, 0, 0, 0.2);
+}
+
+.register-card h2 {
+    text-align: center;
+    margin-bottom: 20px;
+}
+
+.register-card input,
+.register-card select {
+
+    width: 100%;
+
+    padding: 10px;
+
+    margin-top: 5px;
+    margin-bottom: 15px;
+}
+
+.register-card button {
+
+    width: 100%;
+
+    padding: 12px;
+
+    border: none;
+
+    background: #003366;
+
+    color: white;
+
+    cursor: pointer;
+}
+
+/* Buttons */
+
+button:hover {
+    background: #00509e;
+}
+
+/* Footer */
+
+footer {
+    text-align: center;
+    padding: 20px;
+    background: #003366;
+    color: white;
+    margin-top: 30px;
+}
+
+/* Responsive */
+
+@media(max-width:768px) {
+
+    header {
+        flex-direction: column;
+    }
+
+    nav {
+        margin-top: 10px;
+    }
+
+    .register-card,
+    .login-card {
+        width: 95%;
+    }
+
+    .hero h1 {
+        font-size: 30px;
+    }
+}
+
+.dashboard {
+    padding: 40px;
+}
+
+.dashboard h2 {
+    text-align: center;
+    color: #003366;
+    margin-bottom: 30px;
+}
+
+.dashboard-container {
+    display: grid;
+
+    grid-template-columns:
+        repeat(auto-fit, minmax(250px, 1fr));
+
+    gap: 25px;
+}
+
+.dashboard-card {
+
+    background: white;
+
+    padding: 25px;
+
+    border-radius: 15px;
+
+    text-align: center;
+
+    box-shadow:
+        0 0 10px rgba(0, 0, 0, 0.2);
+
+    transition: 0.3s;
+}
+
+.dashboard-card:hover {
+    transform: translateY(-5px);
+}
+
+.dashboard-card h3 {
+    color: #003366;
+    margin-bottom: 10px;
+}
+
+.dashboard-card p {
+    font-size: 25px;
+    font-weight: bold;
+}
+
+.balance-card {
+    background: #003366;
+    color: white;
+}
+
+.balance-card h3 {
+    color: white;
+}
+
+.accounts-section {
+    padding: 40px;
+}
+
+.accounts-section h2 {
+    text-align: center;
+    color: #003366;
+    margin-bottom: 30px;
+}
+
+.account-card {
+    width: 500px;
+    margin: auto;
+
+    background: white;
+
+    padding: 30px;
+
+    border-radius: 15px;
+
+    box-shadow: 0 0 15px rgba(0, 0, 0, 0.2);
+}
+
+.account-card h3 {
+    color: #003366;
+    margin-bottom: 20px;
+}
+
+.account-card p {
+    margin-bottom: 15px;
+    font-size: 18px;
+}
+
+.active-status {
+    color: green;
+    font-weight: bold;
+}
+
+.account-card button {
+    width: 100%;
+    padding: 12px;
+    border: none;
+    background: #003366;
+    color: white;
+    cursor: pointer;
+    border-radius: 5px;
+}
+
+.account-card button:hover {
+    background: #00509e;
+}
+
+.transfer-section {
+
+    display: flex;
+    justify-content: center;
+
+    padding: 40px;
+}
+
+.transfer-card {
+
+    width: 600px;
+
+    background: white;
+
+    padding: 30px;
+
+    border-radius: 15px;
+
+    box-shadow:
+        0 0 10px rgba(0, 0, 0, 0.2);
+}
+
+.transfer-card h2 {
+
+    text-align: center;
+
+    color: #003366;
+
+    margin-bottom: 20px;
+}
+
+.transfer-card input,
+.transfer-card select {
+
+    width: 100%;
+
+    padding: 10px;
+
+    margin-top: 5px;
+    margin-bottom: 15px;
+}
+
+.transfer-card button {
+
+    width: 100%;
+
+    padding: 12px;
+
+    border: none;
+
+    background: #003366;
+
+    color: white;
+
+    cursor: pointer;
+}
+
+/* Transactions page */
+
+.transactions-section {
+    padding: 40px;
+}
+
+.transactions-section h2 {
+    text-align: center;
+    color: #003366;
+    margin-bottom: 30px;
+}
+
+/* Summary cards */
+
+.transaction-summary {
+    display: grid;
+
+    grid-template-columns:
+        repeat(auto-fit,
+            minmax(210px, 1fr));
+
+    gap: 20px;
+    margin-bottom: 30px;
+}
+
+.summary-card {
+    background: white;
+    padding: 20px;
+    border-radius: 12px;
+    text-align: center;
+
+    box-shadow:
+        0 3px 12px rgba(0, 0, 0, 0.12);
+}
+
+.summary-card h3 {
+    margin-bottom: 12px;
+    color: #333;
+}
+
+.summary-card p {
+    font-size: 23px;
+    font-weight: bold;
+}
+
+.credit-summary {
+    border-top: 5px solid #16803c;
+}
+
+.debit-summary {
+    border-top: 5px solid #d42b2b;
+}
+
+.transfer-summary {
+    border-top: 5px solid #0066cc;
+}
+
+.average-summary {
+    border-top: 5px solid #e89b00;
+}
+
+/* Search and filter controls */
+
+.transaction-controls {
+    display: grid;
+
+    grid-template-columns:
+        repeat(auto-fit,
+            minmax(180px, 1fr));
+
+    gap: 15px;
+
+    background: white;
+    padding: 20px;
+    border-radius: 12px;
+    margin-bottom: 25px;
+
+    box-shadow:
+        0 3px 12px rgba(0, 0, 0, 0.1);
+}
+
+.transaction-controls input,
+.transaction-controls select {
+    width: 100%;
+    padding: 11px;
+    border: 1px solid #ccc;
+    border-radius: 6px;
+}
+
+.transaction-controls button {
+    padding: 11px;
+    border: none;
+    border-radius: 6px;
+    background: #003366;
+    color: white;
+    cursor: pointer;
+}
+
+.transaction-controls button:hover {
+    background: #00509e;
+}
+
+/* Transaction table */
+
+.transaction-table-container {
+    overflow-x: auto;
+    background: white;
+    border-radius: 12px;
+
+    box-shadow:
+        0 3px 12px rgba(0, 0, 0, 0.12);
+}
+
+.transaction-table {
+    width: 100%;
+    border-collapse: collapse;
+}
+
+.transaction-table th {
+    background: #003366;
+    color: white;
+    padding: 14px;
+    text-align: left;
+}
+
+.transaction-table td {
+    padding: 14px;
+    border-bottom: 1px solid #ddd;
+}
+
+.transaction-table tbody tr:hover {
+    background: #f0f6ff;
+}
+
+.transaction-type {
+    padding: 5px 10px;
+    border-radius: 15px;
+    font-weight: bold;
+}
+
+.transaction-type.credit {
+    color: #156c32;
+    background: #d8f5e1;
+}
+
+.transaction-type.debit {
+    color: #a51e1e;
+    background: #ffe0e0;
+}
+
+.transaction-type.transfer {
+    color: #004f9f;
+    background: #ddeeff;
+}
+
+#transactionMessage {
+    text-align: center;
+    color: #d42b2b;
+    font-weight: bold;
+    margin-bottom: 15px;
+}
+
+.logout-btn {
+    margin-left: 20px;
+    padding: 8px 15px;
+    border: none;
+    border-radius: 5px;
+    background: #d42b2b;
+    color: white;
+    cursor: pointer;
+}
+
+/* Mobile responsive */
+
+@media(max-width:768px) {
+
+    .transactions-section {
+        padding: 20px;
+    }
+
+    .transaction-table th,
+    .transaction-table td {
+        padding: 10px;
+        font-size: 14px;
+    }
+}
+
+@media(max-width:480px) {
+
+    .transaction-controls {
+        grid-template-columns:
+            repeat(auto-fit,
+                minmax(140px, 1fr));
+    }
+
+    .transaction-table th,
+    .transaction-table td {
+        padding: 8px;
+        font-size: 12px;
+    }
+}
+
+.loan-section {
+
+    display: flex;
+    justify-content: center;
+    gap: 30px;
+
+    padding: 40px;
+
+    flex-wrap: wrap;
+}
+
+.loan-card {
+
+    width: 450px;
+
+    background: white;
+
+    padding: 30px;
+
+    border-radius: 15px;
+
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
+}
+
+.loan-card h2 {
+    text-align: center;
+    color: #003366;
+    margin-bottom: 20px;
+}
+
+.loan-card input,
+.loan-card select {
+
+    width: 100%;
+
+    padding: 10px;
+
+    margin-top: 5px;
+    margin-bottom: 15px;
+}
+
+.loan-card button {
+
+    width: 100%;
+
+    padding: 12px;
+
+    border: none;
+
+    background: #003366;
+
+    color: white;
+
+    cursor: pointer;
+}
+
+.loan-result {
+
+    width: 450px;
+
+    background: white;
+
+    padding: 30px;
+
+    border-radius: 15px;
+
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
+}
+
+.loan-result h3 {
+    margin-bottom: 20px;
+    color: #003366;
+}
+
+.loan-result p {
+    margin-bottom: 10px;
+    font-size: 18px;
+}
+
+.profile-section {
+
+    display: flex;
+    justify-content: center;
+
+    padding: 40px;
+}
+
+.profile-card {
+
+    width: 700px;
+
+    background: white;
+
+    padding: 30px;
+
+    border-radius: 15px;
+
+    box-shadow:
+        0 0 10px rgba(0, 0, 0, 0.2);
+}
+
+.profile-card h2 {
+
+    text-align: center;
+
+    color: #003366;
+
+    margin-bottom: 20px;
+}
+
+.profile-card input,
+.profile-card textarea {
+
+    width: 100%;
+
+    padding: 10px;
+
+    margin-top: 5px;
+    margin-bottom: 15px;
+}
+
+.profile-card textarea {
+
+    height: 100px;
+    resize: none;
+}
+
+.profile-card button {
+
+    width: 100%;
+
+    padding: 12px;
+
+    border: none;
+
+    background: #003366;
+
+    color: white;
+
+    cursor: pointer;
+}
+
+.profile-card button:hover {
+
+    background: #00509e;
+}

@@ -1,0 +1,50 @@
+[
+  {
+    "customerId": "CUST001",
+    "firstName": "Kirti",
+    "lastName": "Biswas",
+    "email": "kirti@gmail.com",
+    "mobile": "9876543210",
+    "address": "Kolkata",
+    "city": "Kolkata",
+    "state": "West Bengal",
+    "pinCode": "700001",
+    "accountNumber": "SB100001",
+    "accountType": "Savings",
+    "deposit": 50000,
+    "username": "kirti",
+    "password": "Kirti@123"
+  },
+  {
+    "customerId": "CUST002",
+    "firstName": "Rahul",
+    "lastName": "Sharma",
+    "email": "rahul@gmail.com",
+    "mobile": "9876543211",
+    "address": "Hyderabad",
+    "city": "Hyderabad",
+    "state": "Telangana",
+    "pinCode": "500001",
+    "accountNumber": "SB100002",
+    "accountType": "Current",
+    "deposit": 75000,
+    "username": "rahul",
+    "password": "Rahul@123"
+  },
+  {
+    "customerId": "CUST003",
+    "firstName": "Priya",
+    "lastName": "Reddy",
+    "email": "priya@gmail.com",
+    "mobile": "9876543212",
+    "address": "Bangalore",
+    "city": "Bangalore",
+    "state": "Karnataka",
+    "pinCode": "560001",
+    "accountNumber": "SB100003",
+    "accountType": "Savings",
+    "deposit": 120000,
+    "username": "priya",
+    "password": "Priya@123"
+  }
+]

@@ -1,0 +1,133 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Student Registration Form</title>
+    <style>
+        body {
+            font-family: Arial;
+            width: 400px;
+            margin: 20px auto;
+        }
+
+        input {
+            width: 100%;
+            padding: 8px;
+            margin-top: 5px;
+        }
+
+        .error {
+            color: red;
+            font-size: 14px;
+        }
+
+        button {
+            margin-top: 15px;
+            padding: 10px;
+            width: 100%;
+        }
+
+        .success {
+            color: green;
+        }
+    </style>
+</head>
+<body>
+
+    <h2>Student Registration Form</h2>
+
+    <form id="registrationForm">
+
+        <label>Name</label>
+        <input type="text" id="name">
+        <div class="error" id="nameError"></div>
+
+        <label>Email</label>
+        <input type="text" id="email">
+        <div class="error" id="emailError"></div>
+
+        <label>Mobile Number</label>
+        <input type="text" id="mobile">
+        <div class="error" id="mobileError"></div>
+
+        <label>Password</label>
+        <input type="password" id="password">
+        <div class="error" id="passwordError"></div>
+
+        <label>Confirm Password</label>
+        <input type="password" id="confirmPassword">
+        <div class="error" id="confirmPasswordError"></div>
+
+        <button type="submit">Register</button>
+
+    </form>
+
+    <p id="message" class="success"></p>
+
+    <script>
+
+        document.getElementById("registrationForm")
+        .addEventListener("submit", function(event) {
+
+            event.preventDefault();
+
+            document.getElementById("nameError").innerHTML = "";
+            document.getElementById("emailError").innerHTML = "";
+            document.getElementById("mobileError").innerHTML = "";
+            document.getElementById("passwordError").innerHTML = "";
+            document.getElementById("confirmPasswordError").innerHTML = "";
+            document.getElementById("message").innerHTML = "";
+
+            let isValid = true;
+
+            let name = document.getElementById("name").value.trim();
+            let email = document.getElementById("email").value.trim();
+            let mobile = document.getElementById("mobile").value.trim();
+            let password = document.getElementById("password").value;
+            let confirmPassword = document.getElementById("confirmPassword").value;
+
+            if(name === "") {
+                document.getElementById("nameError").innerHTML =
+                    "Name cannot be empty";
+                isValid = false;
+            }
+
+            let emailPattern =
+                /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
+
+            if(!emailPattern.test(email)) {
+                document.getElementById("emailError").innerHTML =
+                    "Enter valid email";
+                isValid = false;
+            }
+
+            let mobilePattern = /^[0-9]{10}$/;
+
+            if(!mobilePattern.test(mobile)) {
+                document.getElementById("mobileError").innerHTML =
+                    "Mobile number must contain exactly 10 digits";
+                isValid = false;
+            }
+
+            if(password.length < 8) {
+                document.getElementById("passwordError").innerHTML =
+                    "Password must be at least 8 characters";
+                isValid = false;
+            }
+
+            if(password !== confirmPassword) {
+                document.getElementById("confirmPasswordError").innerHTML =
+                    "Passwords do not match";
+                isValid = false;
+            }
+
+            if(isValid) {
+                document.getElementById("message").innerHTML =
+                    "Registration Successful!";
+            }
+
+        });
+
+    </script>
+
+</body>
+</html>

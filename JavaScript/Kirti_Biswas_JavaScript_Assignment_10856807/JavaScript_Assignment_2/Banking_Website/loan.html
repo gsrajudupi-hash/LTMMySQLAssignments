@@ -1,0 +1,115 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+
+    <meta name="viewport"
+          content="width=device-width, initial-scale=1.0">
+
+    <title>Loan Calculator</title>
+
+    <link rel="stylesheet"
+          href="css/style.css">
+</head>
+
+<body>
+
+<header>
+
+    <div class="logo">  
+        SmartBank
+    </div>
+
+    <nav>
+        <a href="dashboard.html">
+            Dashboard
+        </a>
+
+        <a href="accounts.html">
+            Accounts
+        </a>
+
+        <a href="transactions.html">
+            Transactions
+        </a>
+
+        <a href="loan.html">
+            Loan
+        </a>
+    </nav>
+
+</header>
+
+<section class="loan-section">
+
+    <form id="loanForm"
+          class="loan-card">
+
+        <h2>Loan Calculator</h2>
+
+        <label>
+            Loan Type
+        </label>
+
+        <select id="loanType">
+
+            <option>
+                Personal Loan
+            </option>
+
+            <option>
+                Home Loan
+            </option>
+
+            <option>
+                Car Loan
+            </option>
+
+            <option>
+                Education Loan
+            </option>
+
+        </select>
+
+        <label>
+            Loan Amount
+        </label>
+
+        <input type="number"
+               id="loanAmount"
+               required>
+
+        <label>
+            Interest Rate (%)
+        </label>
+
+        <input type="number"
+               id="interestRate"
+               step="0.01"
+               required>
+
+        <label>
+            Loan Tenure (Years)
+        </label>
+
+        <input type="number"
+               id="loanTenure"
+               required>
+
+        <button type="submit">
+            Calculate EMI
+        </button>
+
+    </form>
+
+    <div class="loan-result"
+         id="loanResult">
+
+    </div>
+
+</section>
+
+    <script src="js/loan.js"></script>
+
+</body>
+</html>

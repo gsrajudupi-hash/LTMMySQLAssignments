@@ -1,0 +1,118 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Employee Attendance Management</title>
+
+    <style>
+        body {
+            font-family: Arial;
+            width: 500px;
+            margin: 20px auto;
+        }
+
+        input {
+            width: 100%;
+            padding: 8px;
+            margin-top: 5px;
+            margin-bottom: 10px;
+        }
+
+        button {
+            padding: 10px 20px;
+            margin-right: 10px;
+            cursor: pointer;
+        }
+
+        #status {
+            margin-top: 20px;
+            padding: 10px;
+            font-weight: bold;
+            color: white;
+        }
+
+        .checkin {
+            background-color: green;
+        }
+
+        .checkout {
+            background-color: red;
+        }
+    </style>
+</head>
+
+<body>
+
+    <h2>Employee Attendance Management</h2>
+
+    <label>Employee ID</label>
+    <input type="text" id="empId">
+
+    <label>Employee Name</label>
+    <input type="text" id="empName">
+
+    <button id="checkInBtn">Check In</button>
+    <button id="checkOutBtn">Check Out</button>
+
+    <div id="status"></div>
+
+    <script>
+
+        const statusDiv = document.getElementById("status");
+
+        document.getElementById("checkInBtn")
+        .addEventListener("click", function() {
+
+            let empId =
+                document.getElementById("empId").value;
+
+            let empName =
+                document.getElementById("empName").value;
+
+            if(empId === "" || empName === "") {
+                alert("Please enter Employee ID and Name");
+                return;
+            }
+
+            let dateTime = new Date();
+
+            statusDiv.className = "checkin";
+
+            statusDiv.innerHTML =
+                "Employee Checked In<br>" +
+                "ID : " + empId + "<br>" +
+                "Name : " + empName + "<br>" +
+                "Date & Time : " +
+                dateTime.toLocaleString();
+        });
+
+
+        document.getElementById("checkOutBtn")
+        .addEventListener("click", function() {
+
+            let empId =
+                document.getElementById("empId").value;
+
+            let empName =
+                document.getElementById("empName").value;
+
+            if(empId === "" || empName === "") {
+                alert("Please enter Employee ID and Name");
+                return;
+            }
+
+            let dateTime = new Date();
+
+            statusDiv.className = "checkout";
+
+            statusDiv.innerHTML =
+                "Employee Checked Out<br>" +
+                "ID : " + empId + "<br>" +
+                "Name : " + empName + "<br>" +
+                "Date & Time : " +
+                dateTime.toLocaleString();
+        });
+
+    </script>
+
+</body>
+</html>

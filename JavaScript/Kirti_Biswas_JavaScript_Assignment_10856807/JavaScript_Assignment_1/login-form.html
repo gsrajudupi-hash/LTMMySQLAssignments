@@ -1,0 +1,115 @@
+<!doctype html>
+<html>
+  <head>
+    <title>Login Form</title>
+
+    <style>
+      body {
+        font-family: Arial;
+        width: 400px;
+        margin: 50px auto;
+      }
+
+      input[type="text"],
+      input[type="password"] {
+        width: 100%;
+        padding: 8px;
+        margin-bottom: 10px;
+      }
+
+      button {
+        width: 100%;
+        padding: 10px;
+        cursor: pointer;
+      }
+
+      #message {
+        margin-top: 15px;
+        font-weight: bold;
+      }
+
+      .success {
+        color: green;
+      }
+
+      .error {
+        color: red;
+      }
+
+      .show-password {
+        display: flex;
+        align-items: center;
+        margin: 10px 0;
+      }
+
+      .show-password input[type="checkbox"] {
+        width: auto;
+        margin: 0 8px 0 0;
+      }
+
+      .show-password label {
+        margin: 0;
+        cursor: pointer;
+      }
+    </style>
+  </head>
+  <body>
+    <h2>Login Form</h2>
+
+    <label>Username</label>
+    <input type="text" id="username" />
+
+    <label>Password</label>
+    <input type="password" id="password" />
+
+    <div class="show-password">
+      <input type="checkbox" id="showPassword" />
+      <label for="showPassword">Show Password</label>
+    </div>
+
+    <button id="loginBtn">Login</button>
+
+    <div id="message"></div>
+
+    <script>
+      const validUsername = "admin";
+      const validPassword = "Admin123";
+
+      document
+        .getElementById("showPassword")
+        .addEventListener("change", function () {
+          let passwordField = document.getElementById("password");
+
+          if (this.checked) {
+            passwordField.type = "text";
+          } else {
+            passwordField.type = "password";
+          }
+        });
+
+      function login() {
+        let username = document.getElementById("username").value;
+
+        let password = document.getElementById("password").value;
+
+        let message = document.getElementById("message");
+
+        if (username === validUsername && password === validPassword) {
+          message.className = "success";
+          message.innerHTML = "Welcome " + username + "!";
+        } else {
+          message.className = "error";
+          message.innerHTML = "Invalid Username or Password";
+        }
+      }
+
+      document.getElementById("loginBtn").addEventListener("click", login);
+
+      document.addEventListener("keydown", function (event) {
+        if (event.key === "Enter") {
+          login();
+        }
+      });
+    </script>
+  </body>
+</html>

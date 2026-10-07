@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport"
+          content="width=device-width, initial-scale=1.0">
+
+    <title>Fund Transfer</title>
+
+    <link rel="stylesheet"
+          href="css/style.css">
+</head>
+<body>
+<header>
+    <div class="logo">
+        SmartBank
+    </div>
+
+    <nav>
+        <a href="dashboard.html">Dashboard</a>
+        <a href="accounts.html">Accounts</a>
+        <a href="transactions.html">Transactions</a>
+    </nav>
+
+</header>
+
+<section class="transfer-section">
+
+    <form id="transferForm"
+          class="transfer-card">
+
+        <h2>Fund Transfer</h2>
+
+        <label>
+            Beneficiary Account Number
+        </label>
+
+        <input type="text"
+               id="beneficiaryAccount"
+               required>
+
+        <label>
+            Beneficiary Name
+        </label>
+
+        <input type="text"
+               id="beneficiaryName"
+               required>
+
+        <label>
+            Transfer Amount
+        </label>
+
+        <input type="number"
+               id="amount"
+               required>
+
+        <label>
+            Transfer Type
+        </label>
+
+        <select id="transferType">
+
+            <option>
+                IMPS
+            </option>
+
+            <option>
+                NEFT
+            </option>
+
+            <option>
+                RTGS
+            </option>
+
+        </select>
+
+        <label>
+            Remarks
+        </label>
+
+        <input type="text"
+               id="remarks">
+
+        <button type="submit">
+            Transfer
+        </button>
+
+    </form>
+
+</section>
+
+    <script src="js/transfer.js"></script>
+
+</body>
+</html>

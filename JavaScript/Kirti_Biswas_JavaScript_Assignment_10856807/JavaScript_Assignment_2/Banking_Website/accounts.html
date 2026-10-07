@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Accounts - SmartBank</title>
+
+    <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+
+<header>
+    <div class="logo">SmartBank</div>
+
+    <nav>
+        <a href="dashboard.html">Dashboard</a>
+        <a href="accounts.html">Accounts</a>
+        <a href="transactions.html">Transactions</a>
+        <a href="loan.html">Loan</a>
+    </nav>
+</header>
+
+<section class="accounts-section">
+
+    <h2>Account Details</h2>
+
+    <div class="account-card">
+
+        <h3>Primary Account</h3>
+
+        <p>
+            Account Number :
+            <span id="accountNumber"></span>
+        </p>
+
+        <p>
+            Account Type :
+            <span id="accountType"></span>
+        </p>
+
+        <p>
+            Status :
+            <span class="active-status">
+                Active
+            </span>
+        </p>
+
+        <p>
+            Balance :
+            ₹<span id="balance"></span>
+        </p>
+
+        <button id="toggleBalanceBtn">
+            Hide Balance
+        </button>
+
+    </div>
+
+</section>
+
+    <script src="js/accounts.js"></script>
+
+</body>
+</html>

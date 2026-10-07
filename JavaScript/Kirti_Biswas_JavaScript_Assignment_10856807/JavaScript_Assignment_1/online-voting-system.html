@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Online Voting System</title>
+
+    <style>
+        body {
+            font-family: Arial;
+            width: 500px;
+            margin: 20px auto;
+        }
+
+        h2 {
+            text-align: center;
+        }
+
+        .candidate {
+            margin: 15px 0;
+        }
+
+        button {
+            padding: 10px 20px;
+            cursor: pointer;
+        }
+
+        #result {
+            margin-top: 20px;
+            font-weight: bold;
+            color: green;
+        }
+    </style>
+</head>
+<body>
+
+    <h2>Online Voting System</h2>
+
+    <div class="candidate">
+        <input type="radio" name="candidate" value="Candidate A">
+        Candidate A
+    </div>
+
+    <div class="candidate">
+        <input type="radio" name="candidate" value="Candidate B">
+        Candidate B
+    </div>
+
+    <div class="candidate">
+        <input type="radio" name="candidate" value="Candidate C">
+        Candidate C
+    </div>
+
+    <button id="voteBtn">Vote</button>
+
+    <div id="result"></div>
+
+    <script>
+
+        document.getElementById("voteBtn")
+        .addEventListener("click", function () {
+
+            let selectedCandidate =
+                document.querySelector(
+                    'input[name="candidate"]:checked'
+                );
+
+            if (selectedCandidate == null) {
+                alert("Please select a candidate");
+                return;
+            }
+
+            document.getElementById("result").innerHTML =
+                "You voted for : " +
+                selectedCandidate.value +
+                "<br><br>" +
+                "Thank you for voting.";
+
+            document.getElementById("voteBtn").disabled = true;
+
+            let candidates =
+                document.querySelectorAll(
+                    'input[name="candidate"]'
+                );
+
+            candidates.forEach(function(candidate) {
+                candidate.disabled = true;
+            });
+
+        });
+
+    </script>
+
+</body>
+</html>

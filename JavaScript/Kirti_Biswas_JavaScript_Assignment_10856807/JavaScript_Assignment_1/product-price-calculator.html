@@ -1,0 +1,90 @@
+<!doctype html>
+<html>
+  <head>
+    <title>Product Price Calculator</title>
+
+    <style>
+      body {
+        font-family: Arial;
+        width: 500px;
+        margin: 20px auto;
+      }
+
+      input {
+        width: 100%;
+        padding: 8px;
+        margin-top: 5px;
+        margin-bottom: 10px;
+      }
+
+      button {
+        padding: 10px 20px;
+        cursor: pointer;
+      }
+
+      #result {
+        margin-top: 20px;
+        background-color: #f1f1f1;
+        padding: 15px;
+      }
+    </style>
+  </head>
+  <body>
+    <h2>Product Price Calculator</h2>
+
+    <label>Product Name</label>
+    <input type="text" id="productName" />
+
+    <label>Quantity</label>
+    <input type="number" id="quantity" />
+
+    <label>Price</label>
+    <input type="number" id="price" />
+
+    <button id="calculateBtn">Calculate</button>
+
+    <div id="result"></div>
+
+    <script>
+      document
+        .getElementById("calculateBtn")
+        .addEventListener("click", function () {
+          let productName = document.getElementById("productName").value;
+
+          let quantity = Number(document.getElementById("quantity").value);
+
+          let price = Number(document.getElementById("price").value);
+
+          let subtotal = quantity * price;
+
+          let gst = subtotal * 0.18;
+
+          let discount = 0;
+
+          if (subtotal > 5000) {
+            discount = subtotal * 0.1;
+          }
+
+          let finalAmount = subtotal + gst - discount;
+
+          document.getElementById("result").innerHTML =
+            "<h3>Bill Details</h3>" +
+            "Product Name : " +
+            productName +
+            "<br><br>" +
+            "Subtotal : ₹" +
+            subtotal.toFixed(2) +
+            "<br><br>" +
+            "GST (18%) : ₹" +
+            gst.toFixed(2) +
+            "<br><br>" +
+            "Discount : ₹" +
+            discount.toFixed(2) +
+            "<br><br>" +
+            "<b>Final Amount : ₹" +
+            finalAmount.toFixed(2) +
+            "</b>";
+        });
+    </script>
+  </body>
+</html>

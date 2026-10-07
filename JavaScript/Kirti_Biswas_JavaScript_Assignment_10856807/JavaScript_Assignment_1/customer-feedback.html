@@ -1,0 +1,348 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Customer Feedback Form</title>
+
+    <style>
+        * {
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #f4f6f8;
+            margin: 0;
+            padding: 30px;
+        }
+
+        .container {
+            width: 700px;
+            max-width: 100%;
+            margin: auto;
+            padding: 25px;
+            background-color: white;
+            border-radius: 8px;
+            box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15);
+        }
+
+        h2 {
+            text-align: center;
+            color: #333333;
+        }
+
+        label {
+            display: block;
+            margin-top: 12px;
+            margin-bottom: 5px;
+            font-weight: bold;
+        }
+
+        input[type="text"],
+        input[type="email"],
+        select,
+        textarea {
+            width: 100%;
+            padding: 10px;
+            border: 1px solid #999999;
+            border-radius: 4px;
+            font-size: 16px;
+        }
+
+        textarea {
+            height: 90px;
+            resize: vertical;
+        }
+
+        .subscribe-section {
+            display: flex;
+            align-items: center;
+            gap: 8px;
+            margin: 15px 0;
+        }
+
+        .subscribe-section input[type="checkbox"] {
+            width: 18px;
+            height: 18px;
+            margin: 0;
+            cursor: pointer;
+        }
+
+        .subscribe-section label {
+            display: inline;
+            margin: 0;
+            font-weight: normal;
+            cursor: pointer;
+        }
+
+        button {
+            width: 100%;
+            padding: 11px;
+            border: none;
+            border-radius: 4px;
+            background-color: #0066cc;
+            color: white;
+            font-size: 16px;
+            cursor: pointer;
+        }
+
+        button:hover {
+            background-color: #004d99;
+        }
+
+        #message {
+            min-height: 20px;
+            margin-top: 12px;
+            text-align: center;
+            font-weight: bold;
+        }
+
+        .success {
+            color: green;
+        }
+
+        .error {
+            color: red;
+        }
+
+        .table-container {
+            margin-top: 25px;
+            overflow-x: auto;
+        }
+
+        table {
+            width: 100%;
+            border-collapse: collapse;
+        }
+
+        th,
+        td {
+            padding: 10px;
+            border: 1px solid #cccccc;
+            text-align: center;
+        }
+
+        th {
+            background-color: #0066cc;
+            color: white;
+        }
+
+        tbody tr:nth-child(even) {
+            background-color: #f2f2f2;
+        }
+    </style>
+</head>
+
+<body>
+
+    <div class="container">
+
+        <h2>Customer Feedback Form</h2>
+
+        <form id="feedbackForm">
+
+            <label for="customerName">Customer Name</label>
+            <input
+                type="text"
+                id="customerName"
+                placeholder="Enter customer name"
+            >
+
+            <label for="email">Email</label>
+            <input
+                type="email"
+                id="email"
+                placeholder="Enter email address"
+            >
+
+            <label for="rating">Rating</label>
+            <select id="rating">
+                <option value="">Select rating</option>
+                <option value="1">1 - Poor</option>
+                <option value="2">2 - Fair</option>
+                <option value="3">3 - Good</option>
+                <option value="4">4 - Very Good</option>
+                <option value="5">5 - Excellent</option>
+            </select>
+
+            <label for="suggestions">Suggestions</label>
+            <textarea
+                id="suggestions"
+                placeholder="Enter your suggestions"
+            ></textarea>
+
+            <label for="department">Department</label>
+            <select id="department">
+                <option value="">Select department</option>
+                <option value="Sales">Sales</option>
+                <option value="Support">Support</option>
+                <option value="Billing">Billing</option>
+                <option value="Technical">Technical</option>
+            </select>
+
+            <div class="subscribe-section">
+                <input type="checkbox" id="subscribe">
+
+                <label for="subscribe">
+                    Subscribe to newsletter
+                </label>
+            </div>
+
+            <button type="submit">Submit Feedback</button>
+
+            <div id="message"></div>
+
+        </form>
+
+        <div class="table-container">
+
+            <table>
+                <thead>
+                    <tr>
+                        <th>Name</th>
+                        <th>Email</th>
+                        <th>Rating</th>
+                        <th>Suggestions</th>
+                        <th>Department</th>
+                        <th>Subscribed</th>
+                    </tr>
+                </thead>
+
+                <tbody id="feedbackTable">
+                </tbody>
+            </table>
+
+        </div>
+
+    </div>
+
+    <script>
+        const feedbackForm =
+            document.getElementById("feedbackForm");
+
+        const message =
+            document.getElementById("message");
+
+        feedbackForm.addEventListener("submit", function (event) {
+
+            // Prevent page refresh
+            event.preventDefault();
+
+            const customerName =
+                document.getElementById("customerName")
+                    .value.trim();
+
+            const email =
+                document.getElementById("email")
+                    .value.trim();
+
+            const rating =
+                document.getElementById("rating").value;
+
+            const suggestions =
+                document.getElementById("suggestions")
+                    .value.trim();
+
+            const department =
+                document.getElementById("department").value;
+
+            const isSubscribed =
+                document.getElementById("subscribe").checked;
+
+            message.textContent = "";
+            message.className = "";
+
+            if (customerName === "") {
+                showError("Please enter the customer name.");
+                return;
+            }
+
+            if (email === "") {
+                showError("Please enter the email address.");
+                return;
+            }
+
+            const emailPattern =
+                /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
+
+            if (!emailPattern.test(email)) {
+                showError("Please enter a valid email address.");
+                return;
+            }
+
+            if (rating === "") {
+                showError("Please select a rating.");
+                return;
+            }
+
+            if (suggestions === "") {
+                showError("Please enter your suggestions.");
+                return;
+            }
+
+            if (department === "") {
+                showError("Please select a department.");
+                return;
+            }
+
+            const tableBody =
+                document.getElementById("feedbackTable");
+
+            const newRow =
+                document.createElement("tr");
+
+            const nameCell =
+                document.createElement("td");
+
+            const emailCell =
+                document.createElement("td");
+
+            const ratingCell =
+                document.createElement("td");
+
+            const suggestionCell =
+                document.createElement("td");
+
+            const departmentCell =
+                document.createElement("td");
+
+            const subscriptionCell =
+                document.createElement("td");
+
+            nameCell.textContent = customerName;
+            emailCell.textContent = email;
+            ratingCell.textContent = rating;
+            suggestionCell.textContent = suggestions;
+            departmentCell.textContent = department;
+
+            subscriptionCell.textContent =
+                isSubscribed ? "Yes" : "No";
+
+            newRow.appendChild(nameCell);
+            newRow.appendChild(emailCell);
+            newRow.appendChild(ratingCell);
+            newRow.appendChild(suggestionCell);
+            newRow.appendChild(departmentCell);
+            newRow.appendChild(subscriptionCell);
+
+            tableBody.appendChild(newRow);
+
+            message.textContent =
+                "Feedback submitted successfully.";
+
+            message.className = "success";
+
+            // Reset all form fields
+            feedbackForm.reset();
+        });
+
+        function showError(errorMessage) {
+            message.textContent = errorMessage;
+            message.className = "error";
+        }
+    </script>
+
+</body>
+</html>

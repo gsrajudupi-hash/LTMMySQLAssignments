@@ -1,0 +1,210 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Online Exam System</title>
+
+    <style>
+        body{
+            font-family: Arial, sans-serif;
+            background:#f4f6f9;
+            padding:30px;
+        }
+
+        .container{
+            max-width:800px;
+            margin:auto;
+            background:#fff;
+            padding:25px;
+            border-radius:10px;
+            box-shadow:0 4px 10px rgba(0,0,0,0.1);
+        }
+
+        h2{
+            text-align:center;
+            color:#2563eb;
+        }
+
+        .question{
+            margin-bottom:20px;
+            padding:15px;
+            background:#f8fafc;
+            border-radius:8px;
+        }
+
+        .question p{
+            font-weight:bold;
+        }
+
+        label{
+            display:block;
+            margin:8px 0;
+            cursor:pointer;
+        }
+
+        button{
+            width:100%;
+            padding:12px;
+            border:none;
+            border-radius:6px;
+            background:#2563eb;
+            color:white;
+            font-size:16px;
+            cursor:pointer;
+        }
+
+        button:hover{
+            background:#1d4ed8;
+        }
+
+        #result{
+            margin-top:20px;
+            padding:20px;
+            border-radius:8px;
+            display:none;
+            background:#eff6ff;
+        }
+
+        .pass{
+            color:green;
+            font-weight:bold;
+        }
+
+        .fail{
+            color:red;
+            font-weight:bold;
+        }
+    </style>
+</head>
+
+<body>
+
+<div class="container">
+
+    <h2>Online Exam System</h2>
+
+    <form id="examForm">
+
+        <div class="question">
+            <p>1. Which language is used for web page structure?</p>
+
+            <label><input type="radio" name="q1" value="HTML"> HTML</label>
+            <label><input type="radio" name="q1" value="CSS"> CSS</label>
+            <label><input type="radio" name="q1" value="Java"> Java</label>
+        </div>
+
+        <div class="question">
+            <p>2. Which keyword is used to declare a variable in JavaScript?</p>
+
+            <label><input type="radio" name="q2" value="let"> let</label>
+            <label><input type="radio" name="q2" value="print"> print</label>
+            <label><input type="radio" name="q2" value="echo"> echo</label>
+        </div>
+
+        <div class="question">
+            <p>3. Which tag creates a hyperlink?</p>
+
+            <label><input type="radio" name="q3" value="a"> a</label>
+            <label><input type="radio" name="q3" value="link"> link</label>
+            <label><input type="radio" name="q3" value="href"> href</label>
+        </div>
+
+        <div class="question">
+            <p>4. Which company developed Java?</p>
+
+            <label><input type="radio" name="q4" value="Sun"> Sun Microsystems</label>
+            <label><input type="radio" name="q4" value="Google"> Google</label>
+            <label><input type="radio" name="q4" value="Microsoft"> Microsoft</label>
+        </div>
+
+        <div class="question">
+            <p>5. CSS stands for?</p>
+
+            <label><input type="radio" name="q5" value="Cascading Style Sheets">
+                Cascading Style Sheets
+            </label>
+
+            <label><input type="radio" name="q5" value="Computer Style System">
+                Computer Style System
+            </label>
+
+            <label><input type="radio" name="q5" value="Creative Style Sheet">
+                Creative Style Sheet
+            </label>
+        </div>
+
+        <button type="button" onclick="submitExam()">
+            Submit Exam
+        </button>
+
+    </form>
+
+    <div id="result"></div>
+
+</div>
+
+<script>
+
+function submitExam(){
+
+    let correct = 0;
+
+    const answers = {
+        q1 : "HTML",
+        q2 : "let",
+        q3 : "a",
+        q4 : "Sun",
+        q5 : "Cascading Style Sheets"
+    };
+
+    for(let key in answers){
+
+        let selected =
+            document.querySelector(
+                `input[name="${key}"]:checked`
+            );
+
+        if(selected && selected.value === answers[key]){
+            correct++;
+        }
+    }
+
+    let total = 5;
+    let wrong = total - correct;
+    let percentage = (correct / total) * 100;
+
+    let status =
+        percentage >= 40
+        ? "Pass"
+        : "Fail";
+
+    let statusClass =
+        percentage >= 40
+        ? "pass"
+        : "fail";
+
+    const result =
+        document.getElementById("result");
+
+    result.style.display = "block";
+
+    result.innerHTML = `
+        <h3>Exam Result</h3>
+
+        <p>Correct Answers : ${correct}</p>
+
+        <p>Wrong Answers : ${wrong}</p>
+
+        <p>Percentage : ${percentage}%</p>
+
+        <p class="${statusClass}">
+            Status : ${status}
+        </p>
+    `;
+}
+
+</script>
+
+</body>
+</html>

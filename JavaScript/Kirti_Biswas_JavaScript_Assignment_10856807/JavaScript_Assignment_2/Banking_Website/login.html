@@ -1,0 +1,59 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+    <title>Login - SmartBank</title>
+
+    <link rel="stylesheet" href="css/style.css" />
+  </head>
+  <body>
+    <header>
+      <div class="logo">SmartBank</div>
+
+      <nav>
+        <a href="index.html">Home</a>
+        <a href="register.html">Register</a>
+      </nav>
+    </header>
+
+    <section class="login-container">
+      <form id="loginForm" class="login-card">
+        <h2>Customer Login</h2>
+
+        <div id="message"></div>
+
+        <label> Username </label>
+        <input
+          type="text"
+          id="username"
+          placeholder="Enter Username"
+          required
+        />
+
+        <label> Password </label>
+        <input
+          type="password"
+          id="password"
+          placeholder="Enter Password"
+          required
+        />
+
+        <div class="show-password">
+          <input type="checkbox" id="showPassword" />
+          <label for="showPassword">Show Password</label>
+        </div>
+
+        <button type="submit">Login</button>
+
+        <p>
+          New User?
+          <a href="register.html"> Register Here </a>
+        </p>
+      </form>
+    </section>
+
+    <script src="js/auth.js"></script>
+  </body>
+</html>
