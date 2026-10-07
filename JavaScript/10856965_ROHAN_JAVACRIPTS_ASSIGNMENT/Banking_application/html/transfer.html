@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>SmartBank - Fund Transfer</title>
+    <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+    <header>
+        <div class="logo">SmartBank</div>
+        <nav><a href="dashboard.html">Dashboard</a></nav>
+    </header>
+    <main class="form-container">
+        <h2>Fund Transfer</h2>
+        <form id="transfer-form">
+            <input type="text" id="beneficiary" placeholder="Beneficiary Account Number" required>
+            <input type="number" id="transfer-amount" placeholder="Amount" required>
+            <select id="transfer-type"><option value="IMPS">IMPS</option><option value="NEFT">NEFT</option><option value="RTGS">RTGS</option></select>
+            <button type="submit">Transfer Now</button>
+        </form>
+    </main>
+</body>
+</html>

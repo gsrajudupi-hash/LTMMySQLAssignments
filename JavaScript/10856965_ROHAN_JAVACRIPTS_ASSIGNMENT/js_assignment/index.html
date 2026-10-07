@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Product Price Calculator</title>
+</head>
+<body>
+ 
+    <h2>Product Calculator</h2>
+    <label>Price: </label><input type="number" id="price"><br><br>
+    <label>Quantity: </label><input type="number" id="quantity"><br><br>
+    <button onclick="calculateBill()">Calculate</button>
+ 
+    <h3>Results:</h3>
+    <p>Subtotal: <span id="subtotal">0</span></p>
+    <p>GST (18%): <span id="gst">0</span></p>
+    <p>Discount: <span id="discount">0</span></p>
+    <p>Final Amount: <span id="finalAmount">0</span></p>
+ 
+    <!-- Include your JavaScript code here -->
+    <script>
+        function calculateBill() {
+          let price = parseFloat(document.getElementById("price").value) || 0;
+          let qty = parseInt(document.getElementById("quantity").value) || 0;
+ 
+          let subtotal = price * qty;
+          let gst = subtotal * 0.18;
+          let totalBeforeDiscount = subtotal + gst;
+          
+          let discount = 0;
+          if (totalBeforeDiscount > 5000) {
+            discount = totalBeforeDiscount * 0.10;
+          }
+ 
+          let finalAmount = totalBeforeDiscount - discount;
+ 
+          document.getElementById("subtotal").innerText = subtotal.toFixed(2);
+          document.getElementById("gst").innerText = gst.toFixed(2);
+          document.getElementById("discount").innerText = discount.toFixed(2);
+          document.getElementById("finalAmount").innerText = finalAmount.toFixed(2);
+        }
+    </script>
+</body>
+</html>

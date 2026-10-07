@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>SmartBank - Dashboard</title>
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="css/dashboard.css">
+</head>
+<body>
+    <header>
+        <div class="logo">SmartBank Dashboard</div>
+        <nav>
+            <a href="dashboard.html">Dashboard</a>
+            <a href="accounts.html">Accounts</a>
+            <a href="transfer.html">Transfer</a>
+            <a href="transactions.html">Transactions</a>
+            <a href="loan.html">Loans</a>
+            <a href="profile.html">Profile</a>
+            <a href="#" id="logout-btn">Logout</a>
+        </nav>
+    </header>
+    <main>
+        <h2>Account Summary</h2>
+        <div class="grid-container">
+            <div class="card"><h3>Available Balance</h3><p id="dash-balance">$0.00</p></div>
+            <div class="card"><h3>Total Deposits</h3><p id="dash-deposits">$0.00</p></div>
+            <div class="card"><h3>Total Withdrawals</h3><p id="dash-withdrawals">$0.00</p></div>
+        </div>
+    </main>
+    <script type ="module" src="js/auth.js"></script>
+</body>
+</html>
