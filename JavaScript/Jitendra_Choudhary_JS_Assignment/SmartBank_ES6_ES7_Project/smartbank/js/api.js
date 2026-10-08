@@ -1,0 +1,1 @@
+export const loadSampleCustomers=async()=>{const response=await fetch('./data/customers.json');if(!response.ok)throw new Error('Sample data unavailable');return response.json()};export const verifyAccount=accountNumber=>new Promise((resolve,reject)=>setTimeout(()=>accountNumber?.startsWith('SB')?resolve(true):reject(new Error('Invalid account')),350));
