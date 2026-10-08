@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8"><meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>SmartBank - Profile</title><link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+  <header id="site-header"></header>
+  <main class="form-page">
+    <div class="form-card">
+      <h1>My Profile</h1>
+      <div id="message"></div>
+      <form id="profile-form">
+        <label>Customer ID<input id="profileCustomerId" disabled></label>
+        <label>Name<input id="profileName" disabled></label>
+        <label>Email<input id="profileEmail" type="email" disabled></label>
+        <label>Mobile<input id="profileMobile" required></label>
+        <label>Address<input id="profileAddress" required></label>
+        <label>City<input id="profileCity" required></label>
+        <label>State<input id="profileState" required></label>
+        <label>PIN Code<input id="profilePin" required></label>
+        <button class="btn" type="submit">Update Profile</button>
+      </form>
+    </div>
+  </main>
+  <script type="module" src="js/app.js"></script>
+</body>
+</html>

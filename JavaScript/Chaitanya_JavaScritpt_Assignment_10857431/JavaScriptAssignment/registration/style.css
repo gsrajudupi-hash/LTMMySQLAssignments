@@ -1,0 +1,36 @@
+body {
+    font-family: Arial;
+}
+ 
+.container {
+    width: 400px;
+    margin: 30px auto;
+}
+ 
+label {
+    display: block;
+    margin-top: 10px;
+}
+ 
+input {
+    width: 100%;
+    padding: 8px;
+    box-sizing: border-box;
+}
+ 
+span {
+    display: block;
+    color: red;
+    font-size: 14px;
+    margin-top: 3px;
+}
+ 
+button {
+    margin-top: 15px;
+    padding: 8px 20px;
+}
+ 
+#success {
+    color: green;
+}
+ 

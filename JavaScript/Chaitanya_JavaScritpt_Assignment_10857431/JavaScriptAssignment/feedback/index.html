@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Customer Feedback</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+ 
+<div class="container">
+ 
+    <h2>Customer Feedback Form</h2>
+ 
+    <form id="feedbackForm">
+ 
+        <label>Customer Name:</label>
+        <input type="text" id="customerName">
+ 
+        <label>Email:</label>
+        <input type="email" id="email">
+ 
+        <label>Rating:</label>
+        <select id="rating">
+            <option value="1">1</option>
+            <option value="2">2</option>
+            <option value="3">3</option>
+            <option value="4">4</option>
+            <option value="5">5</option>
+        </select>
+ 
+        <label>Suggestions:</label>
+        <textarea id="suggestions"></textarea>
+ 
+        <label>Department:</label>
+        <select id="department">
+            <option value="Sales">Sales</option>
+            <option value="Support">Support</option>
+            <option value="HR">HR</option>
+            <option value="Accounts">Accounts</option>
+        </select>
+ 
+        <label>
+            <input type="checkbox" id="subscribe">
+            Subscribe
+        </label>
+ 
+        <button type="submit">Submit Feedback</button>
+ 
+    </form>
+ 
+    <h3>Feedback Details</h3>
+ 
+    <table id="feedbackTable">
+        <thead>
+            <tr>
+                <th>Name</th>
+                <th>Email</th>
+                <th>Rating</th>
+                <th>Suggestions</th>
+                <th>Department</th>
+                <th>Subscribe</th>
+            </tr>
+        </thead>
+ 
+        <tbody>
+        </tbody>
+    </table>
+ 
+</div>
+ 
+<script src="script.js"></script>
+ 
+</body>
+</html>

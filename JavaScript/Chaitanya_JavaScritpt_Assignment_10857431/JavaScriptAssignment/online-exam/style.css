@@ -1,0 +1,22 @@
+body {
+    font-family: Arial;
+}
+ 
+.container {
+    width: 700px;
+    margin: 30px auto;
+}
+ 
+label {
+    display: block;
+    margin: 8px 0;
+}
+ 
+button {
+    margin-top: 15px;
+    padding: 8px 20px;
+}
+ 
+#result {
+    margin-top: 20px;
+}

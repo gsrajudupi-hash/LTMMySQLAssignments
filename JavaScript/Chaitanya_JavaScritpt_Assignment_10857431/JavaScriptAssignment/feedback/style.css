@@ -1,0 +1,45 @@
+body {
+    font-family: Arial;
+}
+ 
+.container {
+    width: 900px;
+    margin: 30px auto;
+}
+ 
+label {
+    display: block;
+    margin-top: 10px;
+}
+ 
+input[type="text"],
+input[type="email"],
+select,
+textarea {
+    width: 300px;
+    padding: 8px;
+    box-sizing: border-box;
+}
+ 
+textarea {
+    height: 80px;
+}
+ 
+button {
+    display: block;
+    margin-top: 15px;
+    padding: 8px 20px;
+}
+ 
+table {
+    margin-top: 20px;
+    border-collapse: collapse;
+    width: 100%;
+}
+ 
+th,
+td {
+    border: 1px solid black;
+    padding: 8px;
+}
+ 

@@ -1,0 +1,72 @@
+{
+  "customers": [
+    {
+      "customerId": "CUST001",
+      "firstName": "Demo",
+      "lastName": "Customer",
+      "dob": "1995-01-10",
+      "gender": "Other",
+      "email": "demo@smartbank.example",
+      "mobile": "9876543210",
+      "address": "SmartBank Demo Address",
+      "city": "Hyderabad",
+      "state": "Telangana",
+      "pin": "500001",
+      "username": "demo",
+      "password": "Demo@123",
+      "accountNumber": "SB100001"
+    },
+    {
+      "customerId": "CUST002",
+      "firstName": "Test",
+      "lastName": "Customer",
+      "dob": "1994-05-15",
+      "gender": "Other",
+      "email": "test@smartbank.example",
+      "mobile": "9876501234",
+      "address": "SmartBank Test Address",
+      "city": "Hyderabad",
+      "state": "Telangana",
+      "pin": "500002",
+      "username": "test",
+      "password": "Test@123",
+      "accountNumber": "SB100002"
+    }
+  ],
+  "accounts": [
+    {
+      "accountNumber": "SB100001",
+      "customerId": "CUST001",
+      "type": "Savings",
+      "balance": 85000,
+      "status": "Active"
+    },
+    {
+      "accountNumber": "SB100002",
+      "customerId": "CUST002",
+      "type": "Savings",
+      "balance": 125000,
+      "status": "Active"
+    }
+  ],
+  "transactions": [
+    {
+      "id": "TXN202610010001",
+      "accountNumber": "SB100001",
+      "type": "Credit",
+      "description": "Salary",
+      "amount": 50000,
+      "date": "2026-10-01",
+      "balance": 85000
+    },
+    {
+      "id": "TXN202610020002",
+      "accountNumber": "SB100001",
+      "type": "Debit",
+      "description": "Electricity Bill",
+      "amount": 2500,
+      "date": "2026-10-02",
+      "balance": 82500
+    }
+  ]
+}

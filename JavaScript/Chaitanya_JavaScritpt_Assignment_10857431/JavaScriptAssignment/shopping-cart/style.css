@@ -1,0 +1,25 @@
+body {
+    font-family: Arial;
+}
+ 
+.container {
+    width: 600px;
+    margin: 30px auto;
+}
+ 
+.product {
+    padding: 15px;
+    border: 1px solid black;
+    margin-bottom: 10px;
+}
+ 
+.product span {
+    margin-right: 15px;
+}
+ 
+button {
+    margin: 3px;
+    padding: 5px 10px;
+}
+ 
+ 

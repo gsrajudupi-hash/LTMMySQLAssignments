@@ -1,0 +1,32 @@
+body {
+    font-family: Arial;
+}
+ 
+.container {
+    width: 500px;
+    margin: 30px auto;
+}
+ 
+label {
+    display: block;
+    margin-top: 10px;
+}
+ 
+input {
+    width: 100%;
+    padding: 8px;
+    box-sizing: border-box;
+}
+ 
+button {
+    margin-top: 15px;
+    padding: 8px 20px;
+}
+ 
+#salarySlip {
+    margin-top: 20px;
+    border: 1px solid black;
+    padding: 20px;
+    line-height: 1.8;
+}
+ 

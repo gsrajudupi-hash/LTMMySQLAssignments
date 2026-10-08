@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Shopping Cart</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+ 
+<div class="container">
+ 
+    <h2>Shopping Cart</h2>
+ 
+    <div id="cart">
+ 
+        <div class="product" data-price="50000">
+ 
+            <span class="name">Laptop</span>
+ 
+            <span>₹50000</span>
+ 
+            <button class="decrease">-</button>
+            <span class="quantity">1</span>
+            <button class="increase">+</button>
+ 
+            <button class="remove">Remove</button>
+ 
+        </div>
+ 
+        <div class="product" data-price="1000">
+ 
+            <span class="name">Mouse</span>
+ 
+            <span>₹1000</span>
+ 
+            <button class="decrease">-</button>
+            <span class="quantity">1</span>
+            <button class="increase">+</button>
+ 
+            <button class="remove">Remove</button>
+ 
+        </div>
+ 
+    </div>
+ 
+    <p>Total Items: <span id="totalItems">0</span></p>
+    <p>Grand Total: ₹<span id="grandTotal">0</span></p>
+ 
+</div>
+ 
+<script src="script.js"></script>
+ 
+</body>
+</html>
+ 

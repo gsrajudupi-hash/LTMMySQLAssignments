@@ -1,0 +1,29 @@
+body {
+    font-family: Arial;
+}
+ 
+.container {
+    width: 400px;
+    margin: 30px auto;
+}
+ 
+label {
+    display: block;
+    margin-top: 10px;
+}
+ 
+input {
+    width: 100%;
+    padding: 8px;
+    box-sizing: border-box;
+}
+ 
+button {
+    margin-top: 15px;
+    padding: 8px 20px;
+}
+ 
+#result {
+    margin-top: 20px;
+    line-height: 1.8;
+}
