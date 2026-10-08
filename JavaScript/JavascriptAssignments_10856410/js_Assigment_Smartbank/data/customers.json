@@ -1,0 +1,20 @@
+[
+  {
+    "customerId": "CUST001",
+    "firstName": "Sanjay",
+    "lastName": "Chandra",
+    "username": "demo",
+    "accountType": "Savings",
+    "city": "Hyderabad",
+    "state": "Telangana"
+  },
+  {
+    "customerId": "CUST002",
+    "firstName": "Priya",
+    "lastName": "Sharma",
+    "username": "priya",
+    "accountType": "Savings",
+    "city": "Bengaluru",
+    "state": "Karnataka"
+  }
+]

@@ -1,0 +1,222 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Open Account | SmartBank</title>
+    <link rel="stylesheet" href="css/style.css" />
+  </head>
+  <body class="auth-page">
+    <header class="site-header compact">
+      <div class="container nav-wrap">
+        <a class="brand" href="index.html"
+          ><span class="brand-mark">S</span
+          ><span
+            ><strong>Smart</strong>Bank<small>Digital Banking</small></span
+          ></a
+        ><a class="back-link" href="index.html">← Back to home</a>
+      </div>
+    </header>
+    <main class="register-main">
+      <div class="container narrow">
+        <div class="page-heading">
+          <span class="eyebrow">OPEN YOUR ACCOUNT</span>
+          <h1>Join SmartBank</h1>
+          <p>
+            Create a fictional demo customer profile. No sensitive or real
+            banking information is required.
+          </p>
+        </div>
+        <form id="registerForm" class="form-card wide-form" novalidate>
+          <div class="form-section">
+            <div class="section-title">
+              <span>01</span>
+              <div>
+                <h3>Personal information</h3>
+                <p>Tell us a little about yourself.</p>
+              </div>
+            </div>
+            <div class="form-grid three">
+              <div class="field">
+                <label>Customer ID</label
+                ><input name="customerId" placeholder="CUST003" /><small
+                  class="error"
+                ></small>
+              </div>
+              <div class="field">
+                <label>First name</label
+                ><input
+                  name="firstName"
+                  placeholder="First name"
+                  required
+                /><small class="error"></small>
+              </div>
+              <div class="field">
+                <label>Last name</label
+                ><input
+                  name="lastName"
+                  placeholder="Last name"
+                  required
+                /><small class="error"></small>
+              </div>
+              <div class="field">
+                <label>Date of birth</label
+                ><input name="dob" type="date" required /><small
+                  class="error"
+                ></small>
+              </div>
+              <div class="field">
+                <label>Gender</label
+                ><select name="gender">
+                  <option value="">Select gender</option>
+                  <option>Female</option>
+                  <option>Male</option>
+                  <option>Other</option>
+                  <option>Prefer not to say</option></select
+                ><small class="error"></small>
+              </div>
+              <div class="field">
+                <label>Mobile number</label
+                ><input
+                  name="mobile"
+                  inputmode="numeric"
+                  placeholder="10-digit mobile"
+                  required
+                /><small class="error"></small>
+              </div>
+            </div>
+          </div>
+          <div class="form-section">
+            <div class="section-title">
+              <span>02</span>
+              <div>
+                <h3>Contact information</h3>
+                <p>Where can we reach you?</p>
+              </div>
+            </div>
+            <div class="form-grid three">
+              <div class="field span-2">
+                <label>Email</label
+                ><input
+                  name="email"
+                  type="email"
+                  placeholder="you@example.com"
+                  required
+                /><small class="error"></small>
+              </div>
+              <div class="field span-3">
+                <label>Address</label
+                ><input
+                  name="address"
+                  placeholder="Street / area"
+                  required
+                /><small class="error"></small>
+              </div>
+              <div class="field">
+                <label>City</label
+                ><input name="city" placeholder="City" required /><small
+                  class="error"
+                ></small>
+              </div>
+              <div class="field">
+                <label>State</label
+                ><input name="state" placeholder="State" required /><small
+                  class="error"
+                ></small>
+              </div>
+              <div class="field">
+                <label>PIN code</label
+                ><input
+                  name="pin"
+                  inputmode="numeric"
+                  placeholder="6-digit PIN"
+                  required
+                /><small class="error"></small>
+              </div>
+            </div>
+          </div>
+          <div class="form-section">
+            <div class="section-title">
+              <span>03</span>
+              <div>
+                <h3>Account setup</h3>
+                <p>Choose your account and initial demo balance.</p>
+              </div>
+            </div>
+            <div class="form-grid three">
+              <div class="field">
+                <label>Account type</label
+                ><select name="accountType">
+                  <option>Savings</option>
+                  <option>Current</option>
+                  <option>Fixed Deposit</option>
+                </select>
+              </div>
+              <div class="field">
+                <label>Initial deposit (₹)</label
+                ><input
+                  name="initialDeposit"
+                  type="number"
+                  min="1000"
+                  value="5000"
+                /><small class="error"></small>
+              </div>
+              <div class="field">
+                <label>Username</label
+                ><input
+                  name="username"
+                  placeholder="Choose username"
+                  required
+                /><small class="error"></small>
+              </div>
+              <div class="field">
+                <label>Password</label>
+                <div class="password-wrap">
+                  <input
+                    name="password"
+                    type="password"
+                    placeholder="Minimum 8 characters"
+                    required
+                  /><button
+                    type="button"
+                    class="password-toggle"
+                    data-toggle-field="password"
+                  >
+                    Show
+                  </button>
+                </div>
+                <small class="error"></small>
+              </div>
+              <div class="field">
+                <label>Confirm password</label>
+                <div class="password-wrap">
+                  <input
+                    name="confirmPassword"
+                    type="password"
+                    placeholder="Repeat password"
+                    required
+                  /><button
+                    type="button"
+                    class="password-toggle"
+                    data-toggle-field="confirmPassword"
+                  >
+                    Show
+                  </button>
+                </div>
+                <small class="error"></small>
+              </div>
+            </div>
+          </div>
+          <div class="form-actions">
+            <a class="btn btn-ghost" href="login.html">Already registered?</a
+            ><button class="btn btn-primary" type="submit">
+              Create demo account <span>→</span>
+            </button>
+          </div>
+          <div id="registerMessage" class="form-message" role="alert"></div>
+        </form>
+      </div>
+    </main>
+    <script type="module" src="js/auth.js"></script>
+  </body>
+</html>

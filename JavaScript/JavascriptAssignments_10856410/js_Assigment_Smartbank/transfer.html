@@ -1,0 +1,179 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Transfer | SmartBank</title>
+    <link rel="stylesheet" href="css/style.css" />
+  </head>
+  <body class="app-page">
+    <div class="app-layout">
+      <aside class="sidebar" id="sidebar">
+        <div class="sidebar-brand">
+          <a class="brand" href="index.html"
+            ><span class="brand-mark">S</span
+            ><span
+              ><strong>Smart</strong>Bank<small>Digital Banking</small></span
+            ></a
+          >
+        </div>
+        <nav class="side-nav">
+          <span class="nav-label">OVERVIEW</span
+          ><a href="dashboard.html">⌂ <span>Dashboard</span></a
+          ><a href="accounts.html">▣ <span>Accounts</span></a
+          ><a href="transactions.html">↔ <span>Transactions</span></a
+          ><span class="nav-label">MONEY</span
+          ><a class="active" href="transfer.html">⇄ <span>Transfer</span></a
+          ><a href="loan.html">▤ <span>Loan calculator</span></a
+          ><span class="nav-label">PERSONAL</span
+          ><a href="profile.html">◯ <span>Profile</span></a>
+        </nav>
+        <div class="sidebar-bottom">
+          <button class="theme-button" id="themeToggle">
+            ☾ <span>Dark mode</span></button
+          ><button class="logout-button" data-logout>
+            ↪ <span>Logout</span>
+          </button>
+        </div>
+      </aside>
+      <main class="app-main">
+        <header class="app-header">
+          <button class="mobile-menu" id="mobileMenu">☰</button>
+          <div class="app-title">
+            <span class="eyebrow">MONEY</span>
+            <h1>Transfer</h1>
+          </div>
+          <div class="header-actions">
+            <button class="icon-btn" id="headerTheme">☼</button>
+            <div class="user-chip">
+              <span class="avatar" id="headerAvatar">SC</span
+              ><span
+                ><b id="headerName">Customer</b
+                ><small>Personal account</small></span
+              >
+            </div>
+          </div>
+        </header>
+        <div class="page-content">
+          <div class="page-intro">
+            <div>
+              <span class="eyebrow">FUND TRANSFER</span>
+              <h2>Send money</h2>
+              <p>
+                Transfer funds between demo accounts using IMPS, NEFT or RTGS.
+              </p>
+            </div>
+            <div class="transfer-limit">
+              <span>Daily limit</span><b>₹5,00,000</b>
+            </div>
+          </div>
+          <div class="transfer-layout">
+            <form id="transferForm" class="panel transfer-form" novalidate>
+              <div class="panel-heading">
+                <div>
+                  <span class="eyebrow">TRANSFER DETAILS</span>
+                  <h3>Enter transfer information</h3>
+                </div>
+                <span class="step-pill">Step 1 of 2</span>
+              </div>
+              <div class="form-grid two">
+                <div class="field span-2">
+                  <label>From account</label
+                  ><select id="fromAccount" name="fromAccount"></select
+                  ><small class="error"></small>
+                </div>
+                <div class="field">
+                  <label>Beneficiary account</label
+                  ><input
+                    name="beneficiaryAccount"
+                    id="beneficiaryAccount"
+                    placeholder="e.g. SB100002"
+                    required
+                  /><small class="error"></small>
+                </div>
+                <div class="field">
+                  <label>Beneficiary name</label
+                  ><input
+                    name="beneficiaryName"
+                    placeholder="Full name"
+                    required
+                  /><small class="error"></small>
+                </div>
+                <div class="field">
+                  <label>Amount (₹)</label
+                  ><input
+                    name="amount"
+                    type="number"
+                    min="1"
+                    placeholder="0.00"
+                    required
+                  /><small class="error"></small>
+                </div>
+                <div class="field">
+                  <label>Transfer type</label
+                  ><select name="transferType">
+                    <option>IMPS</option>
+                    <option>NEFT</option>
+                    <option>RTGS</option>
+                  </select>
+                </div>
+                <div class="field span-2">
+                  <label>Remarks <span class="optional">Optional</span></label
+                  ><input
+                    name="remarks"
+                    maxlength="80"
+                    placeholder="What's this transfer for?"
+                  />
+                </div>
+              </div>
+              <div class="verification" id="verificationStatus">
+                <span>●</span>
+                <div>
+                  <b>Account verification</b
+                  ><small
+                    >We'll verify the beneficiary before confirmation.</small
+                  >
+                </div>
+              </div>
+              <button class="btn btn-primary btn-block" type="submit">
+                Review transfer <span>→</span>
+              </button>
+              <div id="transferMessage" class="form-message"></div>
+            </form>
+            <aside class="panel transfer-side">
+              <div class="transfer-illustration">⇄</div>
+              <h3>Transfer securely</h3>
+              <p>
+                Your transfer is a simulated client-side operation. No real
+                money is moved.
+              </p>
+              <div class="limit-list">
+                <div><span>IMPS</span><b>Instant</b></div>
+                <div><span>NEFT</span><b>Scheduled</b></div>
+                <div><span>RTGS</span><b>High value</b></div>
+              </div>
+            </aside>
+          </div>
+        </div>
+      </main>
+    </div>
+    <div id="confirmationModal" class="modal hidden">
+      <div class="modal-backdrop"></div>
+      <div class="modal-card">
+        <button class="modal-close" id="closeModal">×</button
+        ><span class="eyebrow">CONFIRM TRANSFER</span>
+        <h2>Review before sending</h2>
+        <div id="confirmationBody" class="confirmation-body"></div>
+        <div class="modal-actions">
+          <button class="btn btn-ghost" id="cancelTransfer">Cancel</button
+          ><button class="btn btn-primary" id="confirmTransfer">
+            Confirm transfer <span>→</span>
+          </button>
+        </div>
+      </div>
+    </div>
+    <div id="toastContainer" class="toast-container"></div>
+    <script type="module" src="js/app.js"></script>
+    <script type="module" src="js/transfer.js"></script>
+  </body>
+</html>

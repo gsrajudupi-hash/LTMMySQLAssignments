@@ -1,0 +1,5 @@
+let items = [];
+const money = n => n.toLocaleString('en-IN', { style: 'currency', currency: 'INR' }); addProduct.addEventListener('click', () => { const [name, price] = cartProduct.value.split('|'); const found = items.find(x => x.name === name); found ? found.qty++ : items.push({ name, price: Number(price), qty: 1 }); render() }); function changeQty(i, d) { items[i].qty += d; if (items[i].qty <= 0) items.splice(i, 1); render() } function removeItem(i) { items.splice(i, 1); render() } function render() {
+    cart.innerHTML = ''; items.forEach((x, i) => { const div = document.createElement('div'); div.className = 'cart-item'; div.innerHTML = `<strong>${x.name}</strong><span>${money(x.price)}</span><button onclick="changeQty(${i},-1)">−</button><span>${x.qty}</span><button onclick="changeQty(${i},1)">+</button><button onclick="removeItem(${i})">Remove</button>`; cart.appendChild(div) }); totalItems.textContent = items.reduce((s, x) => s + x.qty, 0);
+    grandTotal.textContent = money(items.reduce((s, x) => s + x.price * x.qty, 0));
+}

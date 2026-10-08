@@ -1,0 +1,29 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width,initial-scale=1.0" />
+    <title>Shopping Cart</title>
+    <link rel="stylesheet" href="style.css" />
+  </head>
+  <body>
+    <main class="container">
+      <h1>7. Shopping Cart</h1>
+      <div class="row">
+        <label
+          >Product<select id="cartProduct">
+            <option value="Laptop|55000">Laptop - ₹55,000</option>
+            <option value="Headphones|2500">Headphones - ₹2,500</option>
+            <option value="Mouse|800">Mouse - ₹800</option>
+          </select></label
+        ><button id="addProduct">Add Product</button>
+      </div>
+      <div id="cart"></div>
+      <div class="result">
+        <strong>Total Items: <span id="totalItems">0</span></strong
+        ><br /><strong>Grand Total: <span id="grandTotal">₹0.00</span></strong>
+      </div>
+    </main>
+    <script src="script.js"></script>
+  </body>
+</html>

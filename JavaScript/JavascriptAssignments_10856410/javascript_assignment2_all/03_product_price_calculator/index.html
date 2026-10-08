@@ -1,0 +1,25 @@
+// Product Price Calculator HTML Structure
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width,initial-scale=1.0" />
+    <title>Product Price Calculator</title>
+    <link rel="stylesheet" href="style.css" />
+  </head>
+  <body>
+    <main class="container">
+      <h1>3. Product Price Calculator</h1>
+      <label>Product Name<input id="productName" /></label>
+      <div class="row">
+        <label>Quantity<input id="quantity" type="number" min="1" /></label
+        ><label
+          >Price<input id="price" type="number" min="0" step="0.01"
+        /></label>
+      </div>
+      <button id="calculate">Calculate</button>
+      <div id="bill" class="result">Enter product details.</div>
+    </main>
+    <script src="script.js"></script>
+  </body>
+</html>

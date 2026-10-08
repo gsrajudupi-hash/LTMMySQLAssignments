@@ -1,0 +1,151 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Profile | SmartBank</title>
+    <link rel="stylesheet" href="css/style.css" />
+  </head>
+  <body class="app-page">
+    <div class="app-layout">
+      <aside class="sidebar" id="sidebar">
+        <div class="sidebar-brand">
+          <a class="brand" href="index.html"
+            ><span class="brand-mark">S</span
+            ><span
+              ><strong>Smart</strong>Bank<small>Digital Banking</small></span
+            ></a
+          >
+        </div>
+        <nav class="side-nav">
+          <span class="nav-label">OVERVIEW</span
+          ><a href="dashboard.html">⌂ <span>Dashboard</span></a
+          ><a href="accounts.html">▣ <span>Accounts</span></a
+          ><a href="transactions.html">↔ <span>Transactions</span></a
+          ><span class="nav-label">MONEY</span
+          ><a href="transfer.html">⇄ <span>Transfer</span></a
+          ><a href="loan.html">▤ <span>Loan calculator</span></a
+          ><span class="nav-label">PERSONAL</span
+          ><a class="active" href="profile.html">◯ <span>Profile</span></a>
+        </nav>
+        <div class="sidebar-bottom">
+          <button class="theme-button" id="themeToggle">
+            ☾ <span>Dark mode</span></button
+          ><button class="logout-button" data-logout>
+            ↪ <span>Logout</span>
+          </button>
+        </div>
+      </aside>
+      <main class="app-main">
+        <header class="app-header">
+          <button class="mobile-menu" id="mobileMenu">☰</button>
+          <div class="app-title">
+            <span class="eyebrow">PERSONAL</span>
+            <h1>Profile</h1>
+          </div>
+          <div class="header-actions">
+            <button class="icon-btn" id="headerTheme">☼</button>
+            <div class="user-chip">
+              <span class="avatar" id="headerAvatar">SC</span
+              ><span
+                ><b id="headerName">Customer</b
+                ><small>Personal account</small></span
+              >
+            </div>
+          </div>
+        </header>
+        <div class="page-content">
+          <div class="profile-hero">
+            <div class="large-avatar" id="profileAvatar">SC</div>
+            <div>
+              <span class="eyebrow">CUSTOMER PROFILE</span>
+              <h2 id="profileName">Customer</h2>
+              <p id="profileCustomerId">CUST001 · SmartBank customer</p>
+            </div>
+            <span class="profile-status">● Active</span>
+          </div>
+          <form id="profileForm" class="panel profile-form">
+            <div class="panel-heading">
+              <div>
+                <span class="eyebrow">PERSONAL DETAILS</span>
+                <h3>Profile information</h3>
+              </div>
+              <span class="edit-note">Editable fields</span>
+            </div>
+            <div class="form-grid two">
+              <div class="field">
+                <label>First name</label
+                ><input name="firstName" required /><small
+                  class="error"
+                ></small>
+              </div>
+              <div class="field">
+                <label>Last name</label><input name="lastName" required /><small
+                  class="error"
+                ></small>
+              </div>
+              <div class="field">
+                <label>Email</label
+                ><input name="email" type="email" required /><small
+                  class="error"
+                ></small>
+              </div>
+              <div class="field">
+                <label>Mobile</label><input name="mobile" required /><small
+                  class="error"
+                ></small>
+              </div>
+              <div class="field span-2">
+                <label>Address</label><input name="address" /><small
+                  class="error"
+                ></small>
+              </div>
+              <div class="field"><label>City</label><input name="city" /></div>
+              <div class="field">
+                <label>State</label><input name="state" />
+              </div>
+              <div class="field">
+                <label>PIN code</label><input name="pin" />
+              </div>
+            </div>
+            <div class="form-actions">
+              <button type="button" class="btn btn-ghost" id="resetProfile">
+                Reset</button
+              ><button class="btn btn-primary" type="submit">
+                Save changes <span>→</span>
+              </button>
+            </div>
+            <div id="profileMessage" class="form-message"></div>
+          </form>
+          <div class="profile-info-grid">
+            <div class="panel">
+              <span class="eyebrow">ACCOUNT</span>
+              <h3>Account overview</h3>
+              <div class="detail-list">
+                <div>
+                  <span>Customer ID</span><b id="detailCustomerId">—</b>
+                </div>
+                <div><span>Username</span><b id="detailUsername">—</b></div>
+                <div>
+                  <span>Account type</span><b id="detailAccountType">—</b>
+                </div>
+              </div>
+            </div>
+            <div class="panel">
+              <span class="eyebrow">PRIVACY</span>
+              <h3>Demo data notice</h3>
+              <p class="muted">
+                Profile and banking data are saved in your browser's
+                localStorage for this assignment. Do not enter real passwords or
+                sensitive banking information.
+              </p>
+            </div>
+          </div>
+        </div>
+      </main>
+    </div>
+    <div id="toastContainer" class="toast-container"></div>
+    <script type="module" src="js/app.js"></script>
+    <script type="module" src="js/customer.js"></script>
+  </body>
+</html>

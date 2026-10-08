@@ -1,0 +1,6 @@
+salaryForm.addEventListener('submit', e => {
+    e.preventDefault();
+    const name = salaryEmployeeName.value.trim(),
+        basic = Number(basicSalary.value); if (!name || basic <= 0) { salarySlip.innerHTML = '<span class="error">Enter a valid employee name and basic salary.</span>'; return }
+    const hra = basic * .20, da = basic * .15, pf = basic * .12, professionalTax = 200, gross = basic + hra + da, totalDeductions = pf + professionalTax, net = gross - totalDeductions, money = n => n.toLocaleString('en-IN', { style: 'currency', currency: 'INR' }); salarySlip.innerHTML = `<h2>Salary Slip</h2><p><span>Employee Name</span><strong>${name}</strong></p><p><span>Basic Salary</span><strong>${money(basic)}</strong></p><p><span>HRA (20%)</span><strong>${money(hra)}</strong></p><p><span>DA (15%)</span><strong>${money(da)}</strong></p><p><span>Gross Salary</span><strong>${money(gross)}</strong></p><p><span>PF (12%)</span><strong>${money(pf)}</strong></p><p><span>Professional Tax</span><strong>${money(professionalTax)}</strong></p><p><span>Total Deductions</span><strong>${money(totalDeductions)}</strong></p><p><span>Net Salary</span><strong>${money(net)}</strong></p>`;
+});

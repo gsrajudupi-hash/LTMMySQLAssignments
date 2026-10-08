@@ -1,0 +1,6 @@
+const images = [{ title: 'Mountain', src: 'https://picsum.photos/seed/mountain/600/400' },
+{ title: 'Forest', src: 'https://picsum.photos/seed/forest/600/400' }, { title: 'Ocean', src: 'https://picsum.photos/seed/ocean/600/400' },
+{ title: 'City', src: 'https://picsum.photos/seed/city/600/400' }]; images.forEach(item => {
+    const figure = document.createElement('figure'), img = document.createElement('img'), caption = document.createElement('figcaption'); img.src = item.src; img.alt = item.title; caption.className = 'caption'; caption.textContent = item.title; img.addEventListener('mouseenter', () => { img.classList.add('enlarged'); caption.style.visibility = 'visible' }); img.addEventListener('mouseleave', () => { img.classList.remove('enlarged'); caption.style.visibility = 'hidden' }); img.addEventListener('click', () => { previewImage.src = item.src; previewImage.alt = item.title; previewTitle.textContent = item.title });
+    figure.append(img, caption); gallery.appendChild(figure)
+});

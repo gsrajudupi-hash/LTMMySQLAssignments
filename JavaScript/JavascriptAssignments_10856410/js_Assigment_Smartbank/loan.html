@@ -1,0 +1,182 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Loan Calculator | SmartBank</title>
+    <link rel="stylesheet" href="css/style.css" />
+  </head>
+  <body class="app-page">
+    <div class="app-layout">
+      <aside class="sidebar" id="sidebar">
+        <div class="sidebar-brand">
+          <a class="brand" href="index.html"
+            ><span class="brand-mark">S</span
+            ><span
+              ><strong>Smart</strong>Bank<small>Digital Banking</small></span
+            ></a
+          >
+        </div>
+        <nav class="side-nav">
+          <span class="nav-label">OVERVIEW</span
+          ><a href="dashboard.html">⌂ <span>Dashboard</span></a
+          ><a href="accounts.html">▣ <span>Accounts</span></a
+          ><a href="transactions.html">↔ <span>Transactions</span></a
+          ><span class="nav-label">MONEY</span
+          ><a href="transfer.html">⇄ <span>Transfer</span></a
+          ><a class="active" href="loan.html">▤ <span>Loan calculator</span></a
+          ><span class="nav-label">PERSONAL</span
+          ><a href="profile.html">◯ <span>Profile</span></a>
+        </nav>
+        <div class="sidebar-bottom">
+          <button class="theme-button" id="themeToggle">
+            ☾ <span>Dark mode</span></button
+          ><button class="logout-button" data-logout>
+            ↪ <span>Logout</span>
+          </button>
+        </div>
+      </aside>
+      <main class="app-main">
+        <header class="app-header">
+          <button class="mobile-menu" id="mobileMenu">☰</button>
+          <div class="app-title">
+            <span class="eyebrow">PLANNING</span>
+            <h1>Loan calculator</h1>
+          </div>
+          <div class="header-actions">
+            <button class="icon-btn" id="headerTheme">☼</button>
+            <div class="user-chip">
+              <span class="avatar" id="headerAvatar">SC</span
+              ><span
+                ><b id="headerName">Customer</b
+                ><small>Personal account</small></span
+              >
+            </div>
+          </div>
+        </header>
+        <div class="page-content">
+          <div class="page-intro">
+            <div>
+              <span class="eyebrow">LOAN PLANNER</span>
+              <h2>Find your monthly EMI</h2>
+              <p>
+                Adjust the amount, rate and tenure to understand your repayment.
+              </p>
+            </div>
+          </div>
+          <div class="loan-layout">
+            <form id="loanForm" class="panel loan-form">
+              <div class="panel-heading">
+                <div>
+                  <span class="eyebrow">LOAN DETAILS</span>
+                  <h3>What are you planning?</h3>
+                </div>
+              </div>
+              <div class="loan-types" id="loanTypes">
+                <button
+                  type="button"
+                  class="loan-type active"
+                  data-type="Personal Loan"
+                >
+                  <span>◈</span><b>Personal</b
+                  ><small>Flexible needs</small></button
+                ><button type="button" class="loan-type" data-type="Home Loan">
+                  <span>⌂</span><b>Home</b
+                  ><small>Property finance</small></button
+                ><button type="button" class="loan-type" data-type="Car Loan">
+                  <span>◇</span><b>Car</b><small>Vehicle finance</small></button
+                ><button
+                  type="button"
+                  class="loan-type"
+                  data-type="Education Loan"
+                >
+                  <span>✦</span><b>Education</b><small>Study finance</small>
+                </button>
+              </div>
+              <input type="hidden" id="loanType" value="Personal Loan" />
+              <div class="range-field">
+                <div class="range-heading">
+                  <label for="loanAmount">Loan amount</label
+                  ><output id="loanAmountOutput">₹5,00,000</output>
+                </div>
+                <input
+                  id="loanAmount"
+                  type="range"
+                  min="50000"
+                  max="5000000"
+                  step="10000"
+                  value="500000"
+                />
+              </div>
+              <div class="form-grid two">
+                <div class="field">
+                  <label>Interest rate (% p.a.)</label
+                  ><input
+                    id="interestRate"
+                    type="number"
+                    min="1"
+                    max="30"
+                    step="0.1"
+                    value="10.5"
+                  />
+                </div>
+                <div class="field">
+                  <label>Tenure (years)</label
+                  ><input
+                    id="loanTenure"
+                    type="number"
+                    min="1"
+                    max="30"
+                    value="5"
+                  />
+                </div>
+              </div>
+              <button class="btn btn-primary btn-block" type="submit">
+                Calculate EMI <span>→</span>
+              </button>
+            </form>
+            <section class="loan-result">
+              <div class="result-card">
+                <span class="eyebrow">ESTIMATED MONTHLY EMI</span
+                ><strong id="emiValue">₹10,747</strong>
+                <p>For your selected loan</p>
+                <div class="result-ring">
+                  <div>
+                    <b id="principalPercent">78%</b><small>Principal</small>
+                  </div>
+                </div>
+                <div class="result-breakdown">
+                  <div>
+                    <span>Principal</span><b id="principalValue">₹5,00,000</b>
+                  </div>
+                  <div>
+                    <span>Total interest</span
+                    ><b id="interestValue">₹1,44,820</b>
+                  </div>
+                  <div>
+                    <span>Total payable</span><b id="totalValue">₹6,44,820</b>
+                  </div>
+                </div>
+              </div>
+              <div class="panel formula-card">
+                <span class="eyebrow">HOW IT'S CALCULATED</span>
+                <h3>Standard EMI formula</h3>
+                <div class="formula">
+                  EMI = P × R × (1 + R)<sup>N</sup><br /><i>──────────────</i
+                  ><br />(1 + R)<sup>N</sup> − 1
+                </div>
+                <p>
+                  P = principal · R = monthly interest rate · N = number of
+                  months
+                </p>
+              </div>
+            </section>
+          </div>
+        </div>
+      </main>
+    </div>
+    <div id="toastContainer" class="toast-container"></div>
+    <script type="module" src="js/app.js"></script>
+    <script type="module" src="js/loan.js"></script>
+  </body>
+</html>
