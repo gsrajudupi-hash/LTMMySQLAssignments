@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="UTF-8">
+    <title>Shopping Cart</title>
+    <link rel="stylesheet" href="../css/styles.css">
+</head>
+
+<body>
+    <a class="back" href="../index.html">&larr; All modules</a>
+    <div class="card">
+        <h2>7. Shopping Cart</h2>
+        <div class="row"><input type="text" id="pname" placeholder="Product"><input type="number" id="pprice"
+                placeholder="Price" min="0"><button id="add" style="margin:0">Add</button></div>
+        <div class="err" id="err"></div>
+        <table>
+            <thead>
+                <tr>
+                    <th>Product</th>
+                    <th>Price</th>
+                    <th>Qty</th>
+                    <th>Total</th>
+                    <th></th>
+                </tr>
+            </thead>
+            <tbody id="cart"></tbody>
+        </table>
+        <p>Total items: <b id="items">0</b> &nbsp; Grand total: ₹<b id="grand">0</b></p>
+    </div>
+    <script type="text/javascript" src="../js/q7.js"></script>
+</body>
+
+</html>

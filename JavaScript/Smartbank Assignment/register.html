@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Register | SmartBank</title>
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="css/dashboard.css">
+</head>
+
+<body data-page="register">
+    <header id="site-header" class="site-header"></header>
+    <main class="container">
+        <form id="register-form" class="card" novalidate>
+            <h2>Customer Registration</h2>
+            <div class="form-grid">
+                <label>Customer ID<input name="customerId" type="text"><small class="err"></small></label> <label>First
+                    Name<input name="firstName" type="text"><small class="err"></small></label> <label>Last Name<input
+                        name="lastName" type="text"><small class="err"></small></label> <label>Date of Birth<input
+                        name="dob" type="date"><small class="err"></small></label>
+                <label>Gender<select name="gender">
+                        <option value="">Select</option>
+                        <option>Male</option>
+                        <option>Female</option>
+                        <option>Other</option>
+                    </select><small class="err"></small></label>
+                <label>Email<input name="email" type="email"><small class="err"></small></label> <label>Mobile
+                    Number<input name="mobile" type="tel"><small class="err"></small></label> <label>Address<input
+                        name="address" type="text"><small class="err"></small></label> <label>City<input name="city"
+                        type="text"><small class="err"></small></label> <label>State<input name="state"
+                        type="text"><small class="err"></small></label> <label>PIN Code<input name="pin"
+                        type="text"><small class="err"></small></label>
+                <label>Account Type<select name="accountType">
+                        <option value="">Select</option>
+                        <option>Savings</option>
+                        <option>Current</option>
+                        <option>Fixed Deposit</option>
+                    </select><small class="err"></small></label>
+                <label>Initial Deposit (₹)<input name="deposit" type="number"><small class="err"></small></label>
+                <label>Username<input name="username" type="text"><small class="err"></small></label>
+                <label>Password<input name="password" type="password"><small class="err"></small></label> <label>Confirm
+                    Password<input name="confirmPassword" type="password"><small class="err"></small></label>
+            </div><button type="submit">Register</button>
+        </form>
+    </main>
+    <footer id="site-footer"></footer>
+    <script type="module" src="js/app.js"></script>
+</body>
+
+</html>

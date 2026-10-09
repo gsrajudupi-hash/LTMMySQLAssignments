@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Dashboard | SmartBank</title>
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="css/dashboard.css">
+</head>
+
+<body data-page="dashboard">
+    <header id="site-header" class="site-header"></header>
+    <main class="container">
+        <h1 id="welcome"></h1>
+        <p class="muted">Account(s): <span id="acc-nums"></span></p>
+        <div class="stats">
+            <div class="card stat"><span>Available balance</span><strong id="balance"></strong></div>
+            <div class="card stat"><span>Total deposits</span><strong id="deposits"></strong></div>
+            <div class="card stat"><span>Total withdrawals</span><strong id="withdrawals"></strong></div>
+            <div class="card stat"><span>Transactions</span><strong id="count"></strong></div>
+        </div>
+        <h2>Recent transactions</h2>
+        <div class="table-wrap">
+            <table>
+                <thead>
+                    <tr>
+                        <th>Date</th>
+                        <th>Transaction ID</th>
+                        <th>Type</th>
+                        <th>Description</th>
+                        <th>Amount</th>
+                        <th>Balance</th>
+                    </tr>
+                </thead>
+                <tbody id="recent-body"></tbody>
+            </table>
+        </div>
+    </main>
+    <footer id="site-footer"></footer>
+    <script type="module" src="js/app.js"></script>
+</body>
+
+</html>

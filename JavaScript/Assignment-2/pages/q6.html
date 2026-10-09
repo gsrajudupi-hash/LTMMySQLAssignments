@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="UTF-8">
+    <title>Customer Feedback</title>
+    <link rel="stylesheet" href="../css/styles.css">
+</head>
+
+<body>
+    <a class="back" href="../index.html">&larr; All modules</a>
+    <div class="card">
+        <h2>6. Customer Feedback</h2>
+        <label>Name</label><input type="text" id="name">
+        <label>Email</label><input type="email" id="email">
+        <label>Rating</label><select id="rating">
+            <option>1</option>
+            <option>2</option>
+            <option>3</option>
+            <option>4</option>
+            <option selected>5</option>
+        </select>
+        <label>Department</label><select id="dept">
+            <option>Sales</option>
+            <option>Support</option>
+            <option>Billing</option>
+            <option>Other</option>
+        </select>
+        <label>Suggestions</label><textarea id="sug" rows="3"></textarea>
+        <label style="font-weight:normal"><input type="checkbox" id="sub"> Subscribe to newsletter</label>
+        <button id="submit">Submit</button>
+        <div class="err" id="err"></div>
+        <table>
+            <thead>
+                <tr>
+                    <th>Name</th>
+                    <th>Email</th>
+                    <th>Rating</th>
+                    <th>Dept</th>
+                    <th>Suggestions</th>
+                    <th>Subscribed</th>
+                </tr>
+            </thead>
+            <tbody id="rows"></tbody>
+        </table>
+    </div>
+    <script type="text/javascript" src="../js/q6.js"></script>
+</body>
+
+</html>

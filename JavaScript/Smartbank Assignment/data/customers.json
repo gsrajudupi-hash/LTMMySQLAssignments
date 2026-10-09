@@ -1,0 +1,83 @@
+{
+  "customers": [
+    {
+      "customerId": "CUST001",
+      "firstName": "Srikanth",
+      "lastName": "Mareedu",
+      "dob": "1995-05-13",
+      "gender": "Male",
+      "email": "srikanth@example.com",
+      "mobile": "9876543210",
+      "address": "12 SD Road",
+      "city": "Hyderabad",
+      "state": "Telangana",
+      "pin": "500003",
+      "username": "srikanth",
+      "password": "Nani@1234"
+    },
+    {
+      "customerId": "CUST002",
+      "firstName": "Sirisha",
+      "lastName": "Pamarthi",
+      "dob": "1998-11-29",
+      "gender": "Female",
+      "email": "siri@example.com",
+      "mobile": "9123456780",
+      "address": "123 MG Road",
+      "city": "Vijayawada",
+      "state": "AndhraPradesh",
+      "pin": "507304",
+      "username": "sireesha",
+      "password": "Siri@1234"
+    }
+  ],
+  "accounts": [
+    {
+      "accountNumber": "SB100001",
+      "customerId": "CUST001",
+      "type": "Savings",
+      "balance": 85000,
+      "status": "Active"
+    },
+    {
+      "accountNumber": "SB100002",
+      "customerId": "CUST002",
+      "type": "Savings",
+      "balance": 125000,
+      "status": "Active"
+    }
+  ],
+  "transactions": [
+    {
+      "id": "TXN1001",
+      "accountNumber": "SB100001",
+      "type": "Credit",
+      "category": "Deposit",
+      "description": "Salary",
+      "amount": 50000,
+      "date": "2026-10-01",
+      "balance": 87500
+    },
+    {
+      "id": "TXN1002",
+      "accountNumber": "SB100001",
+      "type": "Debit",
+      "category": "Withdrawal",
+      "description": "Electricity Bill",
+      "amount": 2500,
+      "date": "2026-10-02",
+      "balance": 85000
+    },
+    {
+      "id": "TXN1003",
+      "accountNumber": "SB100002",
+      "type": "Credit",
+      "category": "Deposit",
+      "description": "Interest Credit",
+      "amount": 5000,
+      "date": "2026-10-01",
+      "balance": 125000
+    }
+  ],
+  "beneficiaries": []
+}

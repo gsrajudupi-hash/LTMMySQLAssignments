@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="UTF-8">
+    <title>Employee Attendance</title>
+    <link rel="stylesheet" href="../css/styles.css">
+</head>
+
+<body>
+    <a class="back" href="../index.html">&larr; All modules</a>
+    <div class="card">
+        <h2>2. Employee Attendance</h2>
+        <label>Employee ID</label><input type="text" id="eid">
+        <label>Employee Name</label><input type="text" id="ename">
+        <div class="row"><button id="in">Check In</button><button id="out">Check Out</button></div>
+        <p><b>Now:</b> <span id="clock"></span></p>
+        <p><b>Status:</b> <span id="status">Not marked</span></p>
+        <div class="err" id="err"></div>
+        <table>
+            <thead>
+                <tr>
+                    <th>ID</th>
+                    <th>Name</th>
+                    <th>Action</th>
+                    <th>Time</th>
+                </tr>
+            </thead>
+            <tbody id="log"></tbody>
+        </table>
+    </div>
+    <script type="text/javascript" src ="../js/q2.js"></script>
+</body>
+
+</html>

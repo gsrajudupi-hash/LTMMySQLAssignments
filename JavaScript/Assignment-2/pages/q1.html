@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="UTF-8">
+    <title>Student Registration</title>
+    <link rel="stylesheet" href="../css/styles.css">
+</head>
+
+<body>
+    <a class="back" href="../index.html">&larr; All modules</a>
+    <div class="card">
+        <h2>1. Student Registration</h2>
+        <form id="reg_form" novalidate>
+            <label>Name</label><input type="text" id="name">
+            <div class="err" id="e-name"></div>
+            <label>Email</label><input type="email" id="email">
+            <div class="err" id="e-email"></div>
+            <label>Mobile</label><input type="text" id="mobile">
+            <div class="err" id="e-mobile"></div>
+            <label>Password</label><input type="password" id="pass">
+            <div class="err" id="e-pass"></div>
+            <label>Confirm Password</label><input type="password" id="cpass">
+            <div class="err" id="e-cpass"></div>
+            <button type="submit">Register</button>
+        </form>
+        <p id="msg" class="ok"></p>
+    </div>
+    <script type="text/javascript" src="../js/q1.js"></script>
+</body>
+
+</html>

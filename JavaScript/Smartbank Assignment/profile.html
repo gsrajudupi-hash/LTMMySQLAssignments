@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Profile | SmartBank</title>
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="css/dashboard.css">
+</head>
+
+<body data-page="profile">
+    <header id="site-header" class="site-header"></header>
+    <main class="container">
+        <h1>My Profile</h1>
+        <form id="profile-form" class="card narrow" novalidate>
+            <dl>
+                <dt>Name</dt>
+                <dd id="p-name"></dd>
+                <dt>Customer ID</dt>
+                <dd id="p-id"></dd>
+            </dl>
+            <label>Email<input name="email" type="email"><small class="err"></small></label>
+            <label>Mobile<input name="mobile"><small class="err"></small></label>
+            <label>Address<input name="address"><small class="err"></small></label>
+            <label>City<input name="city"><small class="err"></small></label>
+            <label>State<input name="state"><small class="err"></small></label>
+            <label>PIN Code<input name="pin"><small class="err"></small></label>
+            <button type="submit">Save changes</button>
+        </form>
+    </main>
+    <footer id="site-footer"></footer>
+    <script type="module" src="js/app.js"></script>
+</body>
+
+</html>
