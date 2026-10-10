@@ -1,0 +1,4 @@
+INDEX VERSION 1.134+C:\Training\Assignment\Java\BankingManagementSystem\.metadata\.plugins\org.eclipse.jdt.core
+1865797976.index
+104084524.index
+1842832713.index
