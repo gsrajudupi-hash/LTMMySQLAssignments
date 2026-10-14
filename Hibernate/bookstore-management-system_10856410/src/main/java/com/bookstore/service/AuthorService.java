@@ -1,0 +1,1 @@
+package com.bookstore.service; import com.bookstore.entity.Author; import java.util.*; public interface AuthorService {List<Author> findAll(); Author findById(Long id); Author save(Author value); void delete(Long id);}

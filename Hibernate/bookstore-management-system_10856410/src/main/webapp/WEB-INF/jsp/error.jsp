@@ -1,0 +1,1 @@
+<%@ include file="common/header.jspf" %><div class="alert alert-danger"><h2>Request failed</h2><p>${message}</p></div><a class="btn btn-secondary" href="${pageContext.request.contextPath}/dashboard">Dashboard</a><%@ include file="common/footer.jspf" %>
