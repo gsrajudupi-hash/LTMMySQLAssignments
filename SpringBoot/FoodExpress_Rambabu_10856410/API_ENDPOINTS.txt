@@ -1,0 +1,123 @@
+FOODEXPRESS API ENDPOINTS
+========================
+
+Base URL: http://localhost:8080
+
+Addresses
+---------
+POST   /api/addresses/customer/{id}
+       Create an address for the customer identified by {id}.
+       JSON body: Address fields (houseNumber, street, city, pincode).
+
+GET    /api/addresses/customer/{id}
+       List addresses for the customer identified by {id}.
+
+GET    /api/addresses/{id}
+       Get an address by address ID.
+
+PUT    /api/addresses/{id}
+       Update an address by address ID.
+       JSON body: Address fields (houseNumber, street, city, pincode).
+
+DELETE /api/addresses/{id}
+       Delete an address by address ID.
+
+Customers
+---------
+POST   /api/customers
+       Create a customer.
+       JSON body: Customer fields.
+
+GET    /api/customers
+       List all customers.
+
+GET    /api/customers/{id}
+       Get a customer by customer ID.
+
+GET    /api/customers/{id}/orders
+       List orders for the customer identified by {id}.
+
+GET    /api/customers/customer/{customerId}
+       List addresses for the customer identified by {customerId}.
+
+PUT    /api/customers/{id}
+       Update a customer by customer ID.
+       JSON body: Customer fields (name, email, phone).
+
+DELETE /api/customers/{id}
+       Delete a customer by customer ID.
+
+Food Items
+----------
+POST   /api/food-items
+       Create a food item.
+       JSON body: {name, description, price, category, available, restaurantId}.
+
+GET    /api/food-items
+       List all food items.
+
+GET    /api/food-items/{id}
+       Get a food item by food item ID.
+
+GET    /api/food-items/category/{category}
+       List food items matching the category (case-insensitive).
+
+PUT    /api/food-items/{id}
+       Update a food item by food item ID.
+       JSON body: {name, description, price, category, available, restaurantId}.
+
+DELETE /api/food-items/{id}
+       Delete a food item by food item ID.
+
+Orders
+------
+POST   /api/orders
+       Place an order.
+       JSON body: {customerId, restaurantId, addressId, items}.
+       Each item: {foodItemId, quantity}.
+
+GET    /api/orders
+       List all orders.
+
+GET    /api/orders/{id}
+       Get an order by order ID.
+
+GET    /api/orders/customer/{id}
+       List orders for the customer identified by {id}.
+
+PATCH  /api/orders/{id}/status?status={status}
+       Change an order's status. The status query parameter is required.
+       Values: PLACED, CONFIRMED, PREPARING, READY_FOR_PICKUP,
+       OUT_FOR_DELIVERY, DELIVERED, CANCELLED.
+
+PATCH  /api/orders/{id}/cancel
+       Cancel an order.
+
+Restaurants
+-----------
+POST   /api/restaurants
+       Create a restaurant.
+       JSON body: Restaurant fields.
+
+GET    /api/restaurants
+       List all restaurants.
+
+GET    /api/restaurants/{id}
+       Get a restaurant by restaurant ID.
+
+GET    /api/restaurants/{id}/menu
+       List available food items for the restaurant identified by {id}.
+
+PUT    /api/restaurants/{id}
+       Update a restaurant by restaurant ID.
+       JSON body: Restaurant fields (name, location, contactNumber, active).
+
+DELETE /api/restaurants/{id}
+       Delete a restaurant by restaurant ID.
+
+Notes
+-----
+- Replace path values in braces with actual IDs or category values.
+- JSON request bodies should use Content-Type: application/json.
+- The customer-address listing is available through both
+  /api/addresses/customer/{id} and /api/customers/customer/{customerId}.
