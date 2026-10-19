@@ -43,14 +43,14 @@ DESC employee_address;
 DROP table employee;
 
 USE employee_db;
-INSERT INTO employee VALUES(1,1,1,'Saunak','Dutta','saunak@gmail.com', '8989898989',50000);
-INSERT INTO employee VALUES(2,3,2,'Amit','Kiran','amit@gmail.com', '9003247891',450000);
-INSERT INTO employee VALUES(3,2,1,'Ramya','','ramyak@gmail.com', '7003271341',60000);
-INSERT INTO employee VALUES(4,1,3,'Raj','Shekhar','raj@gmail.com', '9340598652',75000000);
+INSERT INTO employee VALUES(1,1,1,'Jayasuriya','Senthil','jayasuriya@gmail.com', '8989898989',50000);
+INSERT INTO employee VALUES(2,3,2,'Jayaprakash','Durai','jayaprakash@gmail.com', '9003247891',450000);
+INSERT INTO employee VALUES(3,2,1,'Nishanth','','nishanth@gmail.com', '7003271341',60000);
+INSERT INTO employee VALUES(4,1,3,'Raja','Shekhar','raja@gmail.com', '9340598652',75000000);
 
 
-INSERT INTO employee VALUES(5,2,4,'Raju','Shekhar','raju@gmail.com', '9340598650',15000000);
-INSERT INTO employee VALUES(6,4,2,'Souvik','Rana','souvik@gmail.com', '9340598651',35000000);
+INSERT INTO employee VALUES(5,2,4,'Ravi','Kumar','ravi@gmail.com', '9340598650',15000000);
+INSERT INTO employee VALUES(6,4,2,'Divya','Prasath','divyap@gmail.com', '9340598651',35000000);
 INSERT INTO employee VALUES(7,4,4,'Kirti','Singh','kirti@gmail.com', '9340598654',8000000);
 INSERT INTO employee VALUES(8,2,3,'Shailendra','Kumar','shailendra@gmail.com', '8989898980',12000000);
 
@@ -136,6 +136,3 @@ delimiter ;
 
 
 SELECT getUppercaseFullName(e.employee_id) 'full_name_uppercase' FROM employee e ;
-
-
-
