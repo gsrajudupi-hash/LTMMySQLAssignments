@@ -1,0 +1,856 @@
+/* =====================================================
+   RESET
+   ===================================================== */
+ 
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+ 
+ 
+html {
+    scroll-behavior: smooth;
+}
+ 
+ 
+body {
+    font-family:
+        Arial,
+        Helvetica,
+        sans-serif;
+ 
+    color: #172033;
+ 
+    background-color: #ffffff;
+ 
+    line-height: 1.6;
+}
+ 
+ 
+/* =====================================================
+   COMMON CONTAINER
+   ===================================================== */
+ 
+.container {
+ 
+    width: 90%;
+ 
+    max-width: 1200px;
+ 
+    margin: 0 auto;
+ 
+}
+ 
+ 
+/* =====================================================
+   HEADER
+   ===================================================== */
+ 
+.site-header {
+ 
+    background-color: #061529;
+ 
+    color: #ffffff;
+ 
+    position: relative;
+ 
+}
+ 
+ 
+.header-container {
+ 
+    min-height: 70px;
+ 
+    display: flex;
+ 
+    align-items: center;
+ 
+    justify-content: space-between;
+ 
+}
+ 
+ 
+/* =====================================================
+   LOGO
+   ===================================================== */
+ 
+.logo {
+ 
+    display: flex;
+ 
+    align-items: center;
+ 
+    gap: 8px;
+ 
+    color: #ffffff;
+ 
+    text-decoration: none;
+ 
+    font-size: 1.2rem;
+ 
+    font-weight: bold;
+ 
+}
+ 
+ 
+.logo img {
+ 
+    width: 30px;
+ 
+    height: 30px;
+ 
+    object-fit: contain;
+ 
+}
+ 
+ 
+/* =====================================================
+   NAVIGATION
+   ===================================================== */
+ 
+.main-nav ul {
+ 
+    list-style: none;
+ 
+    display: flex;
+ 
+    align-items: center;
+ 
+    gap: 24px;
+ 
+}
+ 
+ 
+.main-nav a {
+ 
+    color: #ffffff;
+ 
+    text-decoration: none;
+ 
+    font-size: 0.75rem;
+ 
+    transition: color 0.3s ease;
+ 
+}
+ 
+ 
+.main-nav a:hover,
+.main-nav a:focus {
+ 
+    color: #168cff;
+ 
+}
+ 
+ 
+.main-nav .nav-button {
+ 
+    background-color: #147ee8;
+ 
+    padding: 8px 18px;
+ 
+    border-radius: 3px;
+ 
+}
+ 
+ 
+.main-nav .nav-button:hover,
+.main-nav .nav-button:focus {
+ 
+    color: #ffffff;
+ 
+    background-color: #0d68c5;
+ 
+}
+ 
+ 
+/* =====================================================
+   MOBILE MENU BUTTON
+   ===================================================== */
+ 
+.menu-button {
+ 
+    display: none;
+ 
+    border: 0;
+ 
+    background: transparent;
+ 
+    color: #ffffff;
+ 
+    font-size: 1.5rem;
+ 
+    cursor: pointer;
+ 
+}
+ 
+ 
+/* =====================================================
+   HERO
+   ===================================================== */
+ 
+.hero {
+ 
+    min-height: 390px;
+ 
+    display: flex;
+ 
+    align-items: center;
+ 
+    background-color: #071a31;
+ 
+    background-image:
+        linear-gradient(
+            rgba(3, 19, 38, 0.78),
+            rgba(3, 19, 38, 0.78)
+        ),
+        url("../images/hero.jpg");
+ 
+    background-size: cover;
+ 
+    background-position: center;
+ 
+    color: #ffffff;
+ 
+}
+ 
+ 
+.hero-content {
+ 
+    display: flex;
+ 
+    align-items: center;
+ 
+}
+ 
+ 
+.hero-text {
+ 
+    max-width: 600px;
+ 
+}
+ 
+ 
+.eyebrow {
+ 
+    margin-bottom: 6px;
+ 
+    color: #4aa8ff;
+ 
+    font-size: 0.65rem;
+ 
+    font-weight: bold;
+ 
+    letter-spacing: 1px;
+ 
+}
+ 
+ 
+.hero h1 {
+ 
+    margin-bottom: 12px;
+ 
+    font-size: clamp(2rem, 4vw, 3.3rem);
+ 
+    line-height: 1.05;
+ 
+    font-weight: 700;
+ 
+}
+ 
+ 
+.hero-description {
+ 
+    max-width: 500px;
+ 
+    margin-bottom: 22px;
+ 
+    font-size: 0.8rem;
+ 
+    color: #e0e7ef;
+ 
+}
+ 
+ 
+/* =====================================================
+   BUTTONS
+   ===================================================== */
+ 
+.hero-buttons {
+ 
+    display: flex;
+ 
+    gap: 10px;
+ 
+}
+ 
+ 
+.primary-button,
+.secondary-button {
+ 
+    display: inline-block;
+ 
+    padding: 8px 18px;
+ 
+    border-radius: 3px;
+ 
+    text-decoration: none;
+ 
+    font-size: 0.7rem;
+ 
+    font-weight: bold;
+ 
+    transition:
+        background-color 0.3s ease,
+        color 0.3s ease;
+ 
+}
+ 
+ 
+.primary-button {
+ 
+    background-color: #147ee8;
+ 
+    color: #ffffff;
+ 
+}
+ 
+ 
+.primary-button:hover,
+.primary-button:focus {
+ 
+    background-color: #0d68c5;
+ 
+}
+ 
+ 
+.secondary-button {
+ 
+    border: 1px solid #ffffff;
+ 
+    color: #ffffff;
+ 
+}
+ 
+ 
+.secondary-button:hover,
+.secondary-button:focus {
+ 
+    background-color: #ffffff;
+ 
+    color: #071a31;
+ 
+}
+ 
+ 
+/* =====================================================
+   FEATURES
+   ===================================================== */
+ 
+.features {
+ 
+    background-color: #ffffff;
+ 
+    border-bottom: 1px solid #eeeeee;
+ 
+}
+ 
+ 
+.feature-grid {
+ 
+    display: grid;
+ 
+    grid-template-columns:
+        repeat(4, 1fr);
+ 
+}
+ 
+ 
+.feature-card {
+ 
+    padding: 25px 15px;
+ 
+    text-align: center;
+ 
+    border-right: 1px solid #eeeeee;
+ 
+}
+ 
+ 
+.feature-card:last-child {
+ 
+    border-right: none;
+ 
+}
+ 
+ 
+.feature-icon {
+ 
+    width: 42px;
+ 
+    height: 42px;
+ 
+    margin: 0 auto 8px;
+ 
+    display: flex;
+ 
+    align-items: center;
+ 
+    justify-content: center;
+ 
+    border-radius: 50%;
+ 
+    background-color: #f1f7ff;
+ 
+    color: #147ee8;
+ 
+    font-size: 1.1rem;
+ 
+}
+ 
+ 
+.feature-card h2 {
+ 
+    margin-bottom: 5px;
+ 
+    font-size: 0.72rem;
+ 
+}
+ 
+ 
+.feature-card p {
+ 
+    color: #687386;
+ 
+    font-size: 0.58rem;
+ 
+}
+ 
+ 
+/* =====================================================
+   ABOUT
+   ===================================================== */
+ 
+.about {
+ 
+    padding: 45px 0;
+ 
+    background-color: #ffffff;
+ 
+}
+ 
+ 
+.about-grid {
+ 
+    display: grid;
+ 
+    grid-template-columns:
+        1fr 1fr;
+ 
+    gap: 50px;
+ 
+    align-items: center;
+ 
+}
+ 
+ 
+.section-label {
+ 
+    margin-bottom: 5px;
+ 
+    color: #147ee8;
+ 
+    font-size: 0.62rem;
+ 
+    font-weight: bold;
+ 
+    letter-spacing: 1px;
+ 
+}
+ 
+ 
+.about h2 {
+ 
+    margin-bottom: 15px;
+ 
+    font-size: 1.5rem;
+ 
+    line-height: 1.15;
+ 
+}
+ 
+ 
+.about-content > p:not(.section-label) {
+ 
+    margin-bottom: 12px;
+ 
+    color: #697386;
+ 
+    font-size: 0.7rem;
+ 
+}
+ 
+ 
+.about-content .primary-button {
+ 
+    margin-top: 5px;
+ 
+}
+ 
+ 
+.about-image img {
+ 
+    display: block;
+ 
+    width: 100%;
+ 
+    height: auto;
+ 
+    border-radius: 5px;
+ 
+}
+ 
+ 
+/* =====================================================
+   SERVICES
+   ===================================================== */
+ 
+.services {
+ 
+    padding: 35px 0 50px;
+ 
+    background-color: #ffffff;
+ 
+}
+ 
+ 
+.section-heading {
+ 
+    margin-bottom: 25px;
+ 
+    text-align: center;
+ 
+}
+ 
+ 
+.section-heading h2 {
+ 
+    font-size: 1.5rem;
+ 
+}
+ 
+ 
+.service-grid {
+ 
+    display: grid;
+ 
+    grid-template-columns:
+        repeat(4, 1fr);
+ 
+    gap: 12px;
+ 
+}
+ 
+ 
+.service-card {
+ 
+    min-height: 120px;
+ 
+    padding: 22px 15px;
+ 
+    text-align: center;
+ 
+    border: 1px solid #e7ebf0;
+ 
+    border-radius: 5px;
+ 
+    background-color: #ffffff;
+ 
+    box-shadow:
+        0 2px 8px rgba(0, 0, 0, 0.04);
+ 
+    transition:
+        transform 0.3s ease,
+        box-shadow 0.3s ease;
+ 
+}
+ 
+ 
+.service-card:hover {
+ 
+    transform: translateY(-3px);
+ 
+    box-shadow:
+        0 6px 16px rgba(0, 0, 0, 0.08);
+ 
+}
+ 
+ 
+.service-card h3 {
+ 
+    margin-bottom: 8px;
+ 
+    font-size: 0.72rem;
+ 
+}
+ 
+ 
+.service-card p {
+ 
+    color: #687386;
+ 
+    font-size: 0.58rem;
+ 
+}
+ 
+ 
+/* =====================================================
+   FOOTER
+   ===================================================== */
+ 
+.site-footer {
+ 
+    padding: 20px;
+ 
+    background-color: #061529;
+ 
+    color: #aeb9c8;
+ 
+    text-align: center;
+ 
+    font-size: 0.65rem;
+ 
+}
+ 
+ 
+/* =====================================================
+   TABLET
+   ===================================================== */
+ 
+@media (max-width: 900px) {
+ 
+ 
+    .main-nav ul {
+ 
+        gap: 13px;
+ 
+    }
+ 
+ 
+    .main-nav a {
+ 
+        font-size: 0.65rem;
+ 
+    }
+ 
+ 
+    .feature-grid {
+ 
+        grid-template-columns:
+            repeat(4, 1fr);
+ 
+    }
+ 
+ 
+    .about-grid {
+ 
+        gap: 25px;
+ 
+    }
+ 
+ 
+    .service-grid {
+ 
+        grid-template-columns:
+            repeat(2, 1fr);
+ 
+    }
+ 
+}
+ 
+ 
+/* =====================================================
+   MOBILE
+   ===================================================== */
+ 
+@media (max-width: 700px) {
+ 
+ 
+    .container {
+ 
+        width: 92%;
+ 
+    }
+ 
+ 
+    /* Header */
+ 
+    .header-container {
+ 
+        min-height: 60px;
+ 
+    }
+ 
+ 
+    .main-nav {
+ 
+        display: none;
+ 
+    }
+ 
+ 
+    .menu-button {
+ 
+        display: block;
+ 
+    }
+ 
+ 
+    /* Hero */
+ 
+    .hero {
+ 
+        min-height: 430px;
+ 
+        padding: 50px 0;
+ 
+        align-items: flex-end;
+ 
+    }
+ 
+ 
+    .hero h1 {
+ 
+        font-size: 2rem;
+ 
+    }
+ 
+ 
+    .hero-description {
+ 
+        font-size: 0.72rem;
+ 
+    }
+ 
+ 
+    .hero-buttons {
+ 
+        flex-wrap: wrap;
+ 
+    }
+ 
+ 
+    /* Features */
+ 
+    .feature-grid {
+ 
+        grid-template-columns:
+            repeat(2, 1fr);
+ 
+    }
+ 
+ 
+    .feature-card {
+ 
+        padding: 18px 10px;
+ 
+        border-right: none;
+ 
+        border-bottom: 1px solid #eeeeee;
+ 
+    }
+ 
+ 
+    .feature-card:nth-child(odd) {
+ 
+        border-right: 1px solid #eeeeee;
+ 
+    }
+ 
+ 
+    /* About */
+ 
+    .about {
+ 
+        padding: 35px 0;
+ 
+    }
+ 
+ 
+    .about-grid {
+ 
+        grid-template-columns: 1fr;
+ 
+        gap: 25px;
+ 
+    }
+ 
+ 
+    .about h2 {
+ 
+        font-size: 1.4rem;
+ 
+    }
+ 
+ 
+    /* Services */
+ 
+    .service-grid {
+ 
+        grid-template-columns: 1fr;
+ 
+    }
+ 
+ 
+    .service-card {
+ 
+        min-height: auto;
+ 
+    }
+ 
+}
+ 
+ 
+/* =====================================================
+   SMALL MOBILE
+   ===================================================== */
+ 
+@media (max-width: 420px) {
+ 
+ 
+    .hero {
+ 
+        min-height: 450px;
+ 
+    }
+ 
+ 
+    .hero h1 {
+ 
+        font-size: 1.75rem;
+ 
+    }
+ 
+ 
+    .feature-grid {
+ 
+        grid-template-columns: 1fr 1fr;
+ 
+    }
+ 
+ 
+    .feature-card h2 {
+ 
+        font-size: 0.65rem;
+ 
+    }
+ 
+ 
+    .feature-card p {
+ 
+        font-size: 0.55rem;
+ 
+    }
+ 
+}
+ 

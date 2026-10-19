@@ -1,0 +1,587 @@
+
+@font-face {
+    font-family: "Oceanic";
+    src: url("../fonts/Lobster-Regular.ttf") format("truetype");
+}
+/* =====================================================
+   GENERAL SETTINGS
+   ===================================================== */
+ 
+* {
+    box-sizing: border-box;
+}
+ 
+ 
+html {
+    font-size: 16px;
+}
+ 
+ 
+body {
+ 
+    margin: 0;
+ 
+    padding: 0;
+ 
+    /*
+     * Fallback background colour.
+     * Older browsers will still get a usable page.
+     */
+    background-color: #8bd5df;
+ 
+    /*
+     * Texture required by the assignment.
+     */
+    background-image: url("../images/background.jpg");
+ 
+    background-repeat: repeat;
+ 
+    color: #333;
+ 
+    font-family:
+        Arial,
+        Helvetica,
+        sans-serif;
+ 
+    line-height: 1.5;
+}
+ 
+ 
+/* =====================================================
+   HEADER
+   ===================================================== */
+ 
+.site-header {
+ 
+    padding: 25px 10px 20px;
+ 
+    text-align: center;
+}
+ 
+ 
+.brand {
+ 
+    display: flex;
+ 
+    justify-content: center;
+ 
+    align-items: center;
+ 
+    gap: 8px;
+}
+ 
+ 
+.brand img {
+ 
+    width: 42px;
+ 
+    height: 42px;
+ 
+    object-fit: contain;
+}
+ 
+ 
+.brand h1 {
+ 
+    margin: 0;
+ 
+    color: white;
+ 
+    font-family: "Oceanic",
+        Georgia,
+        "Times New Roman",
+        serif;
+ 
+    font-size: 2rem;
+ 
+    font-weight: bold;
+ 
+    text-shadow:
+        1px 1px 2px #555;
+}
+ 
+ 
+/* =====================================================
+   MAIN CONTAINER
+   ===================================================== */
+ 
+.site-container {
+ 
+    width: 80%;
+ 
+    max-width: 900px;
+ 
+    min-width: 650px;
+ 
+    margin: 0 auto;
+ 
+    background-color: #ffffff;
+ 
+    border: 3px solid #269aaa;
+ 
+    border-radius: 7px;
+ 
+    overflow: visible;
+}
+ 
+ 
+/* =====================================================
+   NAVIGATION
+   ===================================================== */
+ 
+.main-navigation {
+ 
+    /*
+     * The turquoise strip visible behind
+     * the orange navigation tabs.
+     */
+    background-color: #2497a8;
+ 
+    padding: 35px 5px 0;
+ 
+}
+ 
+ 
+.main-navigation ul {
+ 
+    margin: 0;
+ 
+    padding: 0;
+ 
+    list-style: none;
+ 
+    display: flex;
+ 
+    align-items: flex-end;
+ 
+}
+ 
+ 
+.main-navigation li {
+ 
+    flex: 1;
+ 
+    margin: 0 3px;
+ 
+    text-align: center;
+ 
+}
+ 
+ 
+/* =====================================================
+   NAVIGATION LINKS
+   ===================================================== */
+ 
+.main-navigation a {
+ 
+    position: relative;
+ 
+    display: block;
+ 
+    min-height: 32px;
+ 
+    padding: 7px 4px;
+ 
+    /*
+     * Important fallback.
+     */
+    background-color: #ff8700;
+ 
+    color: white;
+ 
+    text-decoration: none;
+ 
+    font-family:
+        Georgia,
+        "Times New Roman",
+        serif;
+ 
+    font-size: 0.68rem;
+ 
+    font-weight: bold;
+ 
+    border-radius: 10px 10px 0 0;
+ 
+    /*
+     * CSS3 transition.
+     */
+    transition:
+        min-height 0.5s ease,
+        padding 0.5s ease,
+        color 0.2s ease,
+        background-color 0.2s ease;
+ 
+}
+ 
+ 
+/* =====================================================
+   TOP ARROW
+   ===================================================== */
+ 
+.main-navigation a::before {
+ 
+    content: "";
+ 
+    position: absolute;
+ 
+    top: -12px;
+ 
+    left: 50%;
+ 
+    transform: translateX(-50%);
+ 
+    width: 0;
+ 
+    height: 0;
+ 
+    border-left: 12px solid transparent;
+ 
+    border-right: 12px solid transparent;
+ 
+    border-bottom: 12px solid #ff8700;
+ 
+}
+ 
+ 
+/* =====================================================
+   HOVER / FOCUS TAB
+   ===================================================== */
+ 
+.main-navigation a:hover,
+.main-navigation a:focus {
+ 
+    /*
+     * Fallback colour.
+     */
+    background-color: #ffffff;
+ 
+    color: #d47700;
+ 
+    /*
+     * The assignment asks for a background image
+     * on supported browsers.
+     */
+    background-image:
+        url("../images/navigation-hover.jpg");
+ 
+    background-size: cover;
+ 
+    background-position: center;
+ 
+    /*
+     * CSS3 gradient layered over the image.
+     */
+    background-image:
+        linear-gradient(
+            rgba(255, 255, 255, 0.88),
+            rgba(255, 255, 255, 0.88)
+        ),
+        url("../images/navigation-hover.jpg");
+ 
+    /*
+     * Pop-up effect.
+     */
+    min-height: 62px;
+ 
+    padding-top: 20px;
+ 
+}
+ 
+ 
+/* =====================================================
+   REMOVE ARROW ON HOVER
+   ===================================================== */
+ 
+.main-navigation a:hover::before,
+.main-navigation a:focus::before {
+ 
+    display: none;
+ 
+}
+ 
+ 
+/* =====================================================
+   MAIN CONTENT
+   ===================================================== */
+ 
+main {
+ 
+    padding: 12px 20px 25px;
+ 
+    background-color: #ffffff;
+ 
+}
+ 
+ 
+/* =====================================================
+   DESTINATION IMAGE
+   ===================================================== */
+ 
+.destination {
+ 
+    text-align: center;
+ 
+    margin-bottom: 10px;
+ 
+}
+ 
+ 
+.destination img {
+ 
+    display: block;
+ 
+    width: 70%;
+ 
+    max-width: 600px;
+ 
+    height: auto;
+ 
+    margin: 0 auto;
+ 
+    border-radius: 5px;
+ 
+}
+ 
+ 
+/* =====================================================
+   WELCOME
+   ===================================================== */
+ 
+.welcome {
+ 
+    width: 70%;
+ 
+    max-width: 600px;
+ 
+    margin: 0 auto;
+ 
+}
+ 
+ 
+.welcome h2 {
+ 
+    margin: 5px 0;
+ 
+    color: #238c99;
+ 
+    font-family:
+        Georgia,
+        "Times New Roman",
+        serif;
+ 
+    font-size: 1rem;
+ 
+}
+ 
+ 
+.welcome p {
+ 
+    margin: 5px 0;
+ 
+    font-size: 0.68rem;
+ 
+}
+ 
+ 
+/* =====================================================
+   TRAVEL OPTIONS
+   ===================================================== */
+ 
+.travel-options {
+ 
+    width: 70%;
+ 
+    max-width: 600px;
+ 
+    margin: 12px auto 0;
+ 
+    display: flex;
+ 
+    gap: 60px;
+ 
+}
+ 
+ 
+.travel-column {
+ 
+    flex: 1;
+ 
+}
+ 
+ 
+.travel-column h3 {
+ 
+    margin: 0 0 3px;
+ 
+    color: #238c99;
+ 
+    font-family:
+        Georgia,
+        "Times New Roman",
+        serif;
+ 
+    font-size: 0.72rem;
+ 
+}
+ 
+ 
+.travel-column ul {
+ 
+    margin: 0;
+ 
+    padding-left: 18px;
+ 
+}
+ 
+ 
+.travel-column li {
+ 
+    font-size: 0.65rem;
+ 
+    line-height: 1.2;
+ 
+}
+ 
+ 
+.travel-column a {
+ 
+    color: #e48728;
+ 
+}
+ 
+ 
+.travel-column a:hover,
+.travel-column a:focus {
+ 
+    color: #007987;
+ 
+}
+ 
+ 
+/* =====================================================
+   FOOTER
+   ===================================================== */
+ 
+.site-footer {
+ 
+    padding: 12px;
+ 
+    text-align: center;
+ 
+    color: #568b92;
+ 
+    font-family:
+        Georgia,
+        "Times New Roman",
+        serif;
+ 
+    font-size: 0.55rem;
+ 
+}
+ 
+ 
+.site-footer p {
+ 
+    margin: 2px;
+ 
+}
+ 
+ 
+.site-footer a {
+ 
+    color: #568b92;
+ 
+}
+ 
+ 
+/* =====================================================
+   RESPONSIVE FALLBACK
+   ===================================================== */
+ 
+@media (max-width: 700px) {
+ 
+    .site-container {
+ 
+        width: 94%;
+ 
+        min-width: 0;
+ 
+    }
+ 
+ 
+    .main-navigation ul {
+ 
+        flex-direction: column;
+ 
+        gap: 4px;
+ 
+    }
+ 
+ 
+    .main-navigation {
+ 
+        padding-top: 10px;
+ 
+    }
+ 
+ 
+    .main-navigation li {
+ 
+        width: 100%;
+ 
+        margin: 0;
+ 
+    }
+ 
+ 
+    .main-navigation a {
+ 
+        border-radius: 6px;
+ 
+        min-height: 38px;
+ 
+    }
+ 
+ 
+    .main-navigation a::before {
+ 
+        display: none;
+ 
+    }
+ 
+ 
+    .main-navigation a:hover,
+    .main-navigation a:focus {
+ 
+        min-height: 38px;
+ 
+        padding-top: 7px;
+ 
+    }
+ 
+ 
+    .destination img,
+    .welcome,
+    .travel-options {
+ 
+        width: 100%;
+ 
+    }
+ 
+ 
+    .travel-options {
+ 
+        flex-direction: column;
+ 
+        gap: 15px;
+ 
+    }
+ 
+ 
+    .brand h1 {
+ 
+        font-size: 1.5rem;
+ 
+    }
+ 
+}

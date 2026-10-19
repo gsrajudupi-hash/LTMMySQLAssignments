@@ -1,0 +1,222 @@
+/* ==========================================================================
+   1. GLOBAL RESET & BASE STYLES
+   ========================================================================== */
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+html {
+  font-size: 100%; /* 16px default */
+}
+
+body {
+  font-family: 'Open Sans', Arial, Helvetica, sans-serif;
+  font-size: 1rem;
+  line-height: 1.6;
+  color: #1c2d42; /* Deep oceanic navy for high contrast */
+
+  /* Progressive Enhancement: Solid background color for fallback */
+  background-color: #0d3b66;
+
+  /* Subtle texture overlay showing through background color */
+  background-image: url('../images/pattern.png');
+  background-repeat: repeat;
+  background-attachment: fixed;
+}
+
+/* ==========================================================================
+   2. TYPOGRAPHY & BRANDING
+   ========================================================================== */
+h1, h2, h3 {
+  font-family: 'Montserrat', 'Trebuchet MS', sans-serif;
+  line-height: 1.2;
+  margin-bottom: 0.75rem;
+}
+
+.site-header {
+  background-color: #0a2540; /* Dark navy header */
+  border-bottom: 4px solid #f4a261; /* Warm bronze accent rule */
+  padding-top: 1.5rem;
+}
+
+.header-inner {
+  max-width: 1100px;
+  margin: 0 auto;
+  padding: 0 1.5rem;
+}
+
+.branding {
+  display: flex;
+  align-items: center;
+  margin-bottom: 1.5rem;
+}
+
+.site-logo {
+  height: 55px;
+  width: auto;
+  margin-right: 1rem;
+}
+
+/* Non-standard custom font styling with fallbacks */
+.site-title {
+  font-family: 'Montserrat', 'Arial Black', sans-serif;
+  font-size: 2.25rem;
+  font-weight: 800;
+  color: #ffffff;
+  letter-spacing: 1px;
+  text-transform: uppercase;
+  text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.4);
+}
+
+/* ==========================================================================
+   3. HORIZONTAL TAB NAVIGATION WITH POP-UP & ARROW EFFECTS
+   ========================================================================== */
+.main-nav {
+  margin-top: 1rem;
+}
+
+.nav-menu {
+  list-style: none;
+  display: flex;
+  align-items: flex-end; /* Keeps tabs aligned to the bottom baseline */
+  padding: 0;
+  margin: 0;
+}
+
+/* Individual tab items */
+.nav-item {
+  position: relative;
+  margin-right: 0.35rem;
+  height: 48px; /* Default rest height */
+
+  /* Tab styling: Top rounded corners */
+  border-top-left-radius: 8px;
+  border-top-right-radius: 8px;
+
+  /* Solid background fallback for older browsers */
+  background-color: #1d3557;
+
+  /* Progressive Enhancement: Animated tab pop-up over 0.5s */
+  transition: height 0.5s ease-in-out, background-color 0.3s ease;
+}
+
+/* Top indicator arrow (CSS pseudo-element) */
+.nav-item::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 50%;
+  transform: translateX(-50%);
+
+  /* Arrow shape created with pure CSS border tricks */
+  width: 0;
+  height: 0;
+  border-left: 6px solid transparent;
+  border-right: 6px solid transparent;
+  border-top: 6px solid #f4a261; /* Accent arrow color */
+
+  /* Immediate disappearance on hover */
+  opacity: 1;
+  transition: opacity 0s linear;
+}
+
+/* Hover state for tab item */
+.nav-item:hover {
+  height: 60px; 
+  background-color: #457b9d;
+
+  background-size: cover;
+  background-position: center;
+}
+
+/* Hide arrow instantly when hovered over */
+.nav-item:hover::before {
+  opacity: 0;
+}
+
+/* Navigation Links inside Tabs */
+.nav-link {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: 100%;
+  padding: 0 1.5rem;
+  color: #ffffff;
+  text-decoration: none;
+  font-weight: 600;
+  font-size: 1rem;
+  text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.5);
+}
+
+.nav-link:focus {
+  outline: 2px solid #f4a261;
+  outline-offset: -2px;
+}
+
+.nav-item.active {
+  background-color: #e63946;
+  height: 52px;
+}
+
+.nav-item.active::before {
+  border-top-color: #ffffff;
+}
+
+.main-container {
+  max-width: 1100px;
+  margin: 2rem auto;
+  padding: 0 1.5rem;
+}
+
+.hero-card {
+  background-color: #ffffff;
+  padding: 2.5rem;
+  border-radius: 8px;
+  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.2);
+  margin-bottom: 2rem;
+}
+
+.hero-card h2 {
+  color: #0a2540;
+  font-size: 2rem;
+}
+
+.btn-primary {
+  display: inline-block;
+  margin-top: 1rem;
+  padding: 0.75rem 1.5rem;
+  background-color: #e63946;
+  color: #ffffff;
+  text-decoration: none;
+  font-weight: 600;
+  border-radius: 4px;
+  transition: background-color 0.3s ease;
+}
+
+.btn-primary:hover {
+  background-color: #c52a36;
+}
+
+.content-grid {
+  display: flex;
+  gap: 1.5rem;
+  flex-wrap: wrap;
+}
+
+.info-block {
+  flex: 1 1 300px;
+  background-color: rgba(255, 255, 255, 0.95);
+  padding: 1.5rem;
+  border-radius: 6px;
+  border-top: 4px solid #457b9d;
+}
+.site-footer {
+  max-width: 1100px;
+  margin: 3rem auto 1rem auto;
+  padding: 1.5rem;
+  text-align: center;
+  color: #e0e0e0;
+  font-size: 0.875rem;
+}
