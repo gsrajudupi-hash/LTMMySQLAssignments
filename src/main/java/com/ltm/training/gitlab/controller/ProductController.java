@@ -25,7 +25,7 @@ public class ProductController {
 	
 	@GetMapping("/hello")
 	public String hello(){
-		return "Welcome to the Spring Boot Git Lab API";
+		return "Welcome to the Git - enabled Product API";
 	}
 	 
 	@GetMapping("/products")
