@@ -12,10 +12,7 @@ class ProductServiceTest {
 	
 	private final ProductService productService = new ProductService();
 
-	@Test
-	void test() {
-		fail("Not yet implemented");
-	}
+	
 	
 	@Test
 	void testFindAll() {
