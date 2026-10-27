@@ -12,7 +12,11 @@ import com.ltm.training.gitlab.model.Product;
 public class ProductService {
 	
 	private final List<Product> products = List.of(
+//<<<<<<< HEAD // Marks beginning of local changes
 			new Product(1L,"Keyboard",new BigDecimal("52.99"), "Input Devices"),
+//======= // divider b/n your local changes and incoming changes
+			//new Product(1L,"Keyboard",new BigDecimal("54.99"), "Input Devices"),
+//>>>>>>> feature/product-pricing //End of incoming changes
 			new Product(2L,"Mouse",new BigDecimal("19.99"),"Input Devices"),
 			new Product(3L,"Monitor",new BigDecimal("189.00"),"Output Devices"));
 	
