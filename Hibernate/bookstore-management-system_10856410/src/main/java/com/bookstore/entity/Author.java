@@ -1,4 +1,0 @@
-package com.bookstore.entity;
-import jakarta.persistence.*; import jakarta.validation.constraints.*; import java.util.*;
-@Entity @Table(name="authors")
-public class Author { @Id @GeneratedValue(strategy=GenerationType.IDENTITY) private Long id; @NotBlank @Size(max=120) @Column(nullable=false) private String name; @Size(max=1000) private String biography; @OneToMany(mappedBy="author") private List<Book> books=new ArrayList<>(); public Author(){} public Author(String n,String b){name=n;biography=b;} public Long getId(){return id;} public void setId(Long v){id=v;} public String getName(){return name;} public void setName(String v){name=v;} public String getBiography(){return biography;} public void setBiography(String v){biography=v;} public List<Book> getBooks(){return books;} public void setBooks(List<Book> v){books=v;} }

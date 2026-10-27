@@ -1,1 +1,0 @@
-package com.bookstore.entity; public enum OrderStatus { NEW, PROCESSING, SHIPPED, COMPLETED, CANCELLED }

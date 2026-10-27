@@ -1,1 +1,0 @@
-package com.bookstore.service; import com.bookstore.entity.Customer; import java.util.*; public interface CustomerService {List<Customer> findAll(); Customer findById(Long id); Customer save(Customer value); void delete(Long id);}

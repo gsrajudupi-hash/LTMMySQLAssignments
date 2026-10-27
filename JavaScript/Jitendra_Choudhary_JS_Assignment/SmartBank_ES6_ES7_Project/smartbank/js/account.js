@@ -1,1 +1,0 @@
-export class Account{constructor(data){Object.assign(this,data)}deposit(amount){this.balance+=amount}withdraw(amount){if(amount>0&&amount<=this.balance){this.balance-=amount;return true}return false}}

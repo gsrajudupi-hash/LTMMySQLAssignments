@@ -1,1 +1,0 @@
-package com.bookstore.service; import com.bookstore.entity.Category; import java.util.*; public interface CategoryService {List<Category> findAll(); Category findById(Long id); Category save(Category value); void delete(Long id);}

@@ -1,1 +1,0 @@
-package com.bookstore.service; import com.bookstore.entity.Book; import java.util.*; public interface BookService{List<Book> findAll(); List<Book> search(String q); Book findById(Long id); Book save(Book b,Long authorId,Long categoryId); void delete(Long id); long count();}
