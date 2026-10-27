@@ -12,7 +12,7 @@ import com.ltm.training.gitlab.model.Product;
 public class ProductService {
 	
 	private final List<Product> products = List.of(
-			new Product(1L,"Keyboard",new BigDecimal("49.99"),"InputDevices"),
+			new Product(1L,"Keyboard",new BigDecimal("52.99"),"InputDevices"),
 			new Product(2L,"Mouse",new BigDecimal("19.99"),"InputDevices"),
 			new Product(3L,"Monitor",new BigDecimal("189.00"),"OutputDevices"));
 	
